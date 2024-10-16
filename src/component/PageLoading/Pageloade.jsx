@@ -6,17 +6,15 @@ import LoadingImage from "../../assets/loader.svg";
 const PageLoader = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-      const handleLoad = () => {
-        setLoading(false);
-      };
+  useEffect(() => {
+    // Simulating loading for 3 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 13000); // Adjust time as needed
 
-      window.addEventListener("load", handleLoad);
-
-      return () => {
-        window.removeEventListener("load", handleLoad);
-      };
-    }, []);
+    // Cleanup timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
 
 //   useEffect(() => {
 //     // Simulating loading for 3 seconds
