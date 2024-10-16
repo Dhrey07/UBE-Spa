@@ -1,0 +1,25 @@
+.herocont {
+    background-image: url(../../assets/heroimg.svg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.herotext {
+    max-width: 650px;
+    margin: auto;
+    padding-top: 18%;
+    text-align: center;
+    color: white;
+}
+.herotext p {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Poppins;
+    margin-block: 0px;
+}
+.herotext h1 {
+    font-family: "Viaoda Libre", Poppins;
+    font-weight: 400;
+    margin-block: 24px 0px;
+    font-size: 64px;
+}

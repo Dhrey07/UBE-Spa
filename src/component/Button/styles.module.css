@@ -1,0 +1,27 @@
+.btnstyle {
+    padding: 14px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+    max-width: 100%;
+    cursor: pointer;
+}
+button {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Poppins;
+    margin-block: 0px;
+    color: #000000 !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+    button {
+        font-size: 14px;
+    }
+    .btnstyle{
+        padding: 8px 12px;
+    }
+}

@@ -1,0 +1,136 @@
+.servicecont {
+    background-color: #FFECCF;
+}
+
+.servicemargin {
+    max-width: 1440px;
+    padding-block: 80px 156px;
+    margin: auto;
+}
+
+.serviceheader {
+    max-width: 685px;
+    margin: auto;
+    text-align: center;
+}
+
+.serviceheader h4{
+    font-weight: 400;
+    font-family: "Viaoda Libre", Poppins;
+    margin-block: 0px;
+    color: #FF69B4;
+}
+
+.serviceheader p {
+    font-weight: 400;
+    font-family: Poppins;
+    color: #897A64;
+    font-size: 18px;
+}
+
+.hairstyling {
+    background-image: url(../../assets/hairstyling.svg);
+    background-repeat: no-repeat;
+    max-width: 410px;
+    height: 600px;
+    position: relative;
+}
+
+.facialstyling {
+    background-image: url(../../assets/facial.svg);
+    background-repeat: no-repeat;
+    max-width: 410px;
+    height: 600px;
+    position: relative;
+}
+.nailstyling {
+    background-image: url(../../assets/nails.svg);
+    background-repeat: no-repeat;
+    max-width: 410px;
+    height: 600px;
+    position: relative;
+}
+.waxstyling {
+    background-image: url(../../assets/waxing.svg);
+    background-repeat: no-repeat;
+    max-width: 410px;
+    height: 600px;
+    position: relative;
+}
+.bodystyling {
+    background-image: url(../../assets/body.svg);
+    background-repeat: no-repeat;
+    max-width: 410px;
+    height: 600px;
+    position: relative;
+}
+.eyestyling {
+    background-image: url(../../assets/eyebrow.svg);
+    background-repeat: no-repeat;
+    max-width: 410px;
+    height: 600px;
+    position: relative;
+}
+
+.aboutservice {
+    background: white;
+    max-width: 363px;
+    padding: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.aboutservice h4 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #FF69B4;
+    margin-block: 0px;
+    font-family: "Viaoda Libre", Poppins;
+}
+
+.aboutservice p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #897A64;
+    font-family: Poppins;
+    margin-block: 16px 0px;
+}
+
+.mainservice {
+    /* width: 100%; */
+    margin: auto;
+    margin-inline: 80px;
+}
+
+.servicestext {
+    max-width: 413px;
+    margin: auto;
+    text-align: center;
+}
+
+.flexitems {
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    margin-inline: 40px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.servicestext h4 {
+    font-family: "Viaoda Libre", Poppins;
+    font-weight: 400;
+    font-size: 36px;
+    color: #897A64;
+}
+
+.servicebtn {
+    max-width: 170px;
+    margin: auto;
+}
+
+.servicesimmg img {
+    width: 100%;
+}

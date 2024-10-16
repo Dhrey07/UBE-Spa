@@ -1,0 +1,12 @@
+.navbar {
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    color: white;
+    font-weight: 400;
+}
+.btnstyle {
+    width: 175px;
+}

@@ -1,0 +1,33 @@
+.aboutcont {
+    background-color: rgb(246, 233, 217);
+}
+.aboutmain {
+    max-width: 1440px;
+    padding-block: 80px 156px;
+    margin: auto;
+}
+.aboutheader {
+    max-width: 760px;
+    margin: auto;
+    text-align: center;
+}
+.aboutheader h4{
+    font-weight: 400;
+    font-family: "Viaoda Libre", Poppins;
+    margin-block: 0px;
+    color: #FF69B4;
+}
+.aboutheader p {
+    font-weight: 400;
+    font-family: Poppins;
+    color: #897A64;
+    font-size: 18px;
+}
+.aboutplayer {
+    max-width: 1064px;
+    margin: auto;
+}
+.aboutplayer img {
+    max-width: 100%;
+    margin: auto;
+}

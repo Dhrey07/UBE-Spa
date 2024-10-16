@@ -1,0 +1,99 @@
+.valueheader {
+    max-width: 760px;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 50px;
+}
+
+.valuecont {
+    background-color: rgb(247, 239, 230);
+}
+
+.valuemargin {
+    max-width: 1440px;
+    margin: auto;
+    padding-bottom: 120px;
+}
+.marginonly {
+    margin-inline: 80px;
+}
+
+.valueheader h4{
+    font-weight: 400;
+    font-family: "Viaoda Libre", Poppins;
+    margin-block: 0px;
+    color: #FF69B4;
+}
+.valueheader p {
+    font-weight: 400;
+    font-family: Poppins;
+    color: #897A64;
+    font-size: 18px;
+}
+.avaluecont {
+    background: white;
+    padding-inline: 40px;
+    max-width: 282px;
+    padding-block: 120px;
+}
+.avaluecont img {
+    width: 40px;
+}
+.carousel {
+    margin-block: 80px;
+}
+.carouselitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.carouselitem img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.avaluecont h4 {
+    max-width: 180px;
+    font-weight: 400;
+    font-size: 28px;
+    color: #FF69B4;
+    margin-block: 40px 24px;
+    font-family: "Viaoda Libre", Poppins;
+}
+.corevaluebcg {
+    background-image: url(../../assets/corevalue.png);
+    background-repeat: no-repeat;
+    padding: 100px 80px;
+    background-size: cover;
+    background-position: center;
+}
+.avaluecont p {
+    font-weight: 400;
+    margin-block: 0px;
+    font-family: Poppins;
+    color: #897A64;
+    font-size: 16px; 
+}
+.unveil {
+    max-width: 1280px;
+    margin-block: 30px;
+    padding-block: 141px;
+    background-color: #D5A571;
+}
+.unveil h4 {
+    margin-block: 0px;
+    font-size: 36px;
+    font-weight: 400;
+    max-width: 670px;
+    margin: auto;
+    font-family: "Viaoda Libre", Poppins;
+    color: WHITE;
+    text-align: center;
+}
+.unveilbtn {
+    max-width: 180px;
+    margin: auto;
+    margin-top: 48px;
+}
