@@ -3,8 +3,10 @@ import { Grid } from "@mui/material";
 import ImageOne from "../../assets/fleximg1.svg";
 import ImageTwo from "../../assets/fleximgtwo.svg";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.servicecont}>
       <div className={styles.servicemargin}>
@@ -29,7 +31,7 @@ const Services = () => {
               </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} xs={12}>
-              <div className={styles.nailstyling}>
+              <div className={styles.facialstyling}>
                 <div className={styles.aboutservice}>
                   <h4>Facial Treatment</h4>
                   <p>
@@ -40,7 +42,7 @@ const Services = () => {
               </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} xs={12}>
-              <div className={styles.waxstyling}>
+              <div className={styles.nailstyling}>
                 <div className={styles.aboutservice}>
                   <h4>Nails</h4>
                   <p>
@@ -51,7 +53,7 @@ const Services = () => {
               </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} xs={12}>
-              <div className={styles.bodystyling}>
+              <div className={styles.waxstyling}>
                 <div className={styles.aboutservice}>
                   <h4>Waxing</h4>
                   <p>
@@ -62,7 +64,7 @@ const Services = () => {
               </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} xs={12}>
-              <div className={styles.eyestyling}>
+              <div className={styles.bodystyling}>
                 <div className={styles.aboutservice}>
                   <h4>Body Massage</h4>
                   <p>
@@ -73,7 +75,7 @@ const Services = () => {
               </div>
             </Grid>
             <Grid item lg={4} md={6} sm={12} xs={12}>
-              <div className={styles.facialstyling}>
+              <div className={styles.eyestyling}>
                 <div className={styles.aboutservice}>
                   <h4>Eyebrows & Threading</h4>
                   <p>
@@ -95,7 +97,7 @@ const Services = () => {
                 experience.
               </h4>
               <div className={styles.servicebtn}>
-                <Button title="GET STARTED" />
+                <Button onClick={() => navigate("/get-started")} title="GET STARTED" />
               </div>
             </div>
           </div>
@@ -107,7 +109,7 @@ const Services = () => {
                 offer.
               </h4>
               <div className={styles.servicebtn}>
-                <Button title="GET STARTED" />
+                <Button onClick={() => navigate("/get-started")} title="GET STARTED" />
               </div>
             </div>
             <div className={styles.servicesimg}>

@@ -11,6 +11,7 @@ import {
   StepLabel,
   Typography,
   Button,
+  Grid,
 } from "@mui/material";
 
 const steps = [
@@ -48,20 +49,20 @@ const Getstarted = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
+  //   const handleSkip = () => {
+  //     if (!isStepOptional(activeStep)) {
+  //       // You probably want to guard against something like this,
+  //       // it should never occur unless someone's actively trying to break something.
+  //       throw new Error("You can't skip a step that isn't optional.");
+  //     }
 
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
+  //     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  //     setSkipped((prevSkipped) => {
+  //       const newSkipped = new Set(prevSkipped.values());
+  //       newSkipped.add(activeStep);
+  //       return newSkipped;
+  //     });
+  //   };
 
   const handleReset = () => {
     setActiveStep(0);
@@ -113,34 +114,157 @@ const Getstarted = () => {
                 </Box>
               </>
             ) : (
-              <>
-                <Typography sx={{ mt: 2, mb: 1 }}>
-                  Step {activeStep + 1}
-                </Typography>
-                <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+              <div className={styles.stepitem}>
+                {activeStep === 0 && (
+                  <Grid container spacing={2}>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                      <div className={styles.hairstyling}>
+                        <div className={styles.aboutservice}>
+                          <h4>Hair Styling</h4>
+                        </div>
+                      </div>
+                    </Grid>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                      <div className={styles.face}>
+                        <div className={styles.aboutservice}>
+                          <h4>Facial Treatment</h4>
+                        </div>
+                      </div>
+                    </Grid>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                      <div className={styles.nails}>
+                        <div className={styles.aboutservice}>
+                          <h4>Nails</h4>
+                        </div>
+                      </div>
+                    </Grid>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                      <div className={styles.waxing}>
+                        <div className={styles.aboutservice}>
+                          <h4>Waxing</h4>
+                        </div>
+                      </div>
+                    </Grid>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                      <div className={styles.massage}>
+                        <div className={styles.aboutservice}>
+                          <h4>Body Massage</h4>
+                        </div>
+                      </div>
+                    </Grid>
+                    <Grid item lg={4} md={4} sm={6} xs={12}>
+                      <div className={styles.eyebrow}>
+                        <div className={styles.aboutservice}>
+                          <h4>Eyebrows</h4>
+                        </div>
+                      </div>
+                    </Grid>
+                  </Grid>
+                )}
+
+                {/* Conditionally render different content for steps other than the first */}
+                {activeStep === 1 && (
+                  <Typography>Content for Step 2</Typography>
+                )}
+                {activeStep === 2 && (
+                  <Typography>Content for Step 3</Typography>
+                )}
+                {/* Add more steps as needed */}
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "16px",
+                    width: "250px",
+                    margin: "auto",
+                    alignItems: "center",
+                    pt: 2,
+                  }}
+                >
+                  <Button
+                    onClick={handleNext}
+                    sx={{
+                      backgroundColor: "#897A64",
+                      marginBlock: "30px",
+                      paddingBlock: "16px",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "#6e634e",
+                      },
+                      "& button": {
+                        color: "#FFF !important",
+                      },
+                    }}
+                    variant="contained"
+                  >
+                    {activeStep === steps.length - 1 ? "Finish" : "Proceed"}
+                  </Button>
                   <Button
                     color="inherit"
                     disabled={activeStep === 0}
                     onClick={handleBack}
-                    sx={{ mr: 1 }}
+                    sx={{
+                      mr: 1,
+                      display: activeStep > 0 ? "block" : "none",
+                      backgroundColor: "transparent",
+                      border: "1px solid #897A64",
+                      padding: "16px 24px",
+                      color: "black",
+                    }}
                   >
                     Back
                   </Button>
-                  <Box sx={{ flex: "1 1 auto" }} />
-                  {isStepOptional(activeStep) && (
-                    <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
-                      Skip
-                    </Button>
-                  )}
-                  <Button onClick={handleNext}>
-                    {activeStep === steps.length - 1 ? "Finish" : "Next"}
-                  </Button>
                 </Box>
-              </>
+              </div>
             )}
           </Box>
         </div>
       </div>
+      {/* <Grid container spacing={2}>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
+          <div className={styles.hairstyling}>
+            <div className={styles.aboutservice}>
+              <h4>Hair Styling</h4>
+            </div>
+          </div>
+        </Grid>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
+          <div className={styles.face}>
+            <div className={styles.aboutservice}>
+              <h4>Facial Treatment</h4>
+            </div>
+          </div>
+        </Grid>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
+          <div className={styles.nails}>
+            <div className={styles.aboutservice}>
+              <h4>Nails</h4>
+            </div>
+          </div>
+        </Grid>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
+          <div className={styles.waxing}>
+            <div className={styles.aboutservice}>
+              <h4>Waxing</h4>
+            </div>
+          </div>
+        </Grid>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
+          <div className={styles.massage}>
+            <div className={styles.aboutservice}>
+              <h4>Body Massage</h4>
+            </div>
+          </div>
+        </Grid>
+        <Grid item lg={3} md={4} sm={6} xs={12}>
+          <div className={styles.eyebrow}>
+            <div className={styles.aboutservice}>
+              <h4>Eyebrows</h4>
+            </div>
+          </div>
+        </Grid>
+      </Grid> */}
       <Footer />
     </div>
   );

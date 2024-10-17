@@ -8,6 +8,7 @@ import Hero from "./component/Hero/Hero";
 import Services from "./component/Services/Services";
 import PageLoader from "./component/PageLoading/Pageloade";
 import Getstarted from "./pages/getstarted/Getstarted";
+import ContactUs from "./pages/contactus/Contact";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             }
           />
           <Route path="/get-started" element={<Getstarted />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </PageLoader>
     </BrowserRouter>

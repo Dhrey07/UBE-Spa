@@ -32,8 +32,8 @@
 }
 @media (max-width: 500px) {
     .herotext {
-        margin-inline: 16px;
-        padding-top: 50%;
+        padding-inline: 16px;
+        padding-top: 25%;
     }
     .herotext h1 {
         font-size: 32px;

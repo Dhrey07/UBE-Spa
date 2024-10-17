@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className={styles.navbar}>
               <p>Home</p>
               <p>Services</p>
-              <p>Contact</p>
+              <p onClick={() => navigate("/contact-us")}>Contact</p>
             </div>
             <div className={styles.btnstyle}>
               <Button onClick={() => navigate("/get-started")} title="BOOK YOUR VISIT" />

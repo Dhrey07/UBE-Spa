@@ -4,3 +4,10 @@ body {
 .margin-top-45 {
   margin-top: 45px;
 }
+button {
+  color: rgb(0, 0, 0);
+}
+.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-active,
+.css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: #FF69B4 !important;
+}

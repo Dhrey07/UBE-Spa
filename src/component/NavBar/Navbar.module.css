@@ -11,6 +11,10 @@
 .btnstyle {
     width: 175px;
 }
+.navnewbtn {
+    width: 160px;
+    margin-left: 10px;
+}
 .navbtn {
     margin-left: auto;
     /* rgba(0, 0, 0, 0.5)" */

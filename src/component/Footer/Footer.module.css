@@ -71,6 +71,11 @@
     display: flex;
     right: 72px;
 }
+@media (max-width: 1200px) {
+    .verticalinfo {
+        display: none;
+    }
+}
 
 @media (max-width: 500px) {
     .verticalinfo {

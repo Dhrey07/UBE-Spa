@@ -1,0 +1,47 @@
+.contactcont {
+    background-color: #FFF8ED;
+    padding-block: 80px;
+}
+.contactmargin {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+}
+.contactmain {
+    padding-inline: 8.3%;
+}
+.textinfo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 24px;
+}
+.widthcont {
+    max-width: 500px;
+    position: relative;
+}
+.textinfo p{
+    color: #897A64;
+    font-weight: 400;
+    font-size: 18px;
+}
+.decsription {
+    max-width: 450px;
+}
+.contactflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.gmailimg {
+    width: 100%;
+}
+.mainimg img {
+    max-width: 100%;
+}
+@media (max-width: 850px) {
+    .contactflex {
+        flex-wrap: wrap;
+    }
+}

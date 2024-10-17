@@ -15,8 +15,10 @@ import CarouselEight from "../../assets/carousel8.png";
 import CarouselNine from "../../assets/carousel9.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
 
 const CoreValue = () => {
+  const navigate = useNavigate();
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -129,7 +131,7 @@ const CoreValue = () => {
               curated services is designed to elevate your spirit.
             </h4>
             <div className={styles.unveilbtn}>
-              <Button title="BOOK YOUR VISIT" />
+              <Button onClick={() => navigate("/get-started")} title="BOOK YOUR VISIT" />
             </div>
           </div>
         </div>

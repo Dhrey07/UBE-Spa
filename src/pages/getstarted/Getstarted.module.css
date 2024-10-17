@@ -17,3 +17,73 @@
     padding: 18px 24px;
     border-radius: 4px 4px 0px 0px;
 }
+.hairstyling {
+    background-image: url("../../assets/hair.png");
+    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-block: 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+.face {
+    background-image: url("../../assets/face.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-block: 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+.nails {
+    background-image: url("../../assets/nails.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-block: 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+.massage {
+    background-image: url("../../assets/body.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-block: 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+.waxing {
+    background-image: url("../../assets/waxing.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-block: 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+.eyebrow {
+    background-image: url("../../assets/eyebrow.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    padding-block: 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+.aboutservice h4 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #FFF;
+    margin-block: 0px;
+    font-family: "Viaoda Libre", Poppins;
+}
+.stepitem {
+    margin-block: 30px;
+}

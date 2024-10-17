@@ -5,14 +5,35 @@ import Instagram from "../../assets/instagram.svg";
 import Facebook from "../../assets/facebook.svg";
 import Gmail from "../../assets/mail.svg";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const smoothScrollToTop = () => {
+    const scrollDuration = 1000; // Set the duration in milliseconds (1000ms = 1 second)
+  
+    const scrollStep = -window.scrollY / (scrollDuration / 15);
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 40); // The interval of scrolling (15ms for smoothness)
+  };
   return (
     <div className={styles.footer}>
       <div className={styles.footercont}>
         <Grid container spacing={2}>
           <Grid item lg={2} md={4} sm={4} xs={6}>
-            <div className={styles.margintop}>
+            <div
+              onClick={() => {
+                navigate("/");
+                smoothScrollToTop();
+              }}
+              className={styles.margintop}
+            >
               <img src={FooterLogo} alt="" />
             </div>
           </Grid>
@@ -56,7 +77,10 @@ const Footer = () => {
           <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
               <div className={styles.unveilbtn}>
-                <Button title="BOOK YOUR VISIT" />
+                <Button
+                  onClick={() => navigate("/get-started")}
+                  title="BOOK YOUR VISIT"
+                />
               </div>
             </div>
           </Grid>

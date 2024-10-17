@@ -185,4 +185,7 @@
     .flexitemstwo img {
         display: none;
     }
+    .flexitemstwo {
+        margin-top: 30px;
+    }
 }
