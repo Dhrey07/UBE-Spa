@@ -69,7 +69,7 @@ const Getstarted = () => {
   };
   return (
     <div>
-      <SubHero />
+      <SubHero title="Book Your Appointment" />
       <div className={styles.getstartedcont}>
         <div className={styles.getstartedmargin}>
           <h1>Please Select Appointment Details</h1>

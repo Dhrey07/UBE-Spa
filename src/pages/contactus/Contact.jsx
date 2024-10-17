@@ -10,7 +10,7 @@ import Location from "../../assets/location.png";
 const Contact = () => {
   return (
     <div>
-      <SubHero />
+      <SubHero title="Contact Us" />
       <div className={styles.contactcont}>
         <div className={styles.contactmargin}>
           <div className={styles.contactmain}>
