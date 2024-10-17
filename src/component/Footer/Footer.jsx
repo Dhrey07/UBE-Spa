@@ -62,7 +62,7 @@ const Footer = () => {
           <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
               <h4>Contact us</h4>
-              <p>(219) 555-0114</p>
+              <p>+1 (317) 222-4515</p>
 
               <div className={styles.follow}>
                 <h4>Follow Us</h4>
