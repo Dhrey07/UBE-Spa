@@ -17,7 +17,7 @@
 }
 
 .serviceheader h4{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
@@ -28,7 +28,7 @@
     font-weight: 400;
     font-family: Poppins;
     color: #897A64;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .hairstyling {
@@ -121,6 +121,14 @@
     justify-content: space-between;
     gap: 20px;
 }
+.flexitemstwo {
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    margin-inline: 40px;
+    justify-content: space-between;
+    gap: 20px;
+}
 
 .servicestext h4 {
     font-family: "Viaoda Libre", Poppins;
@@ -135,6 +143,9 @@
 }
 
 .servicesimmg img {
+    width: 100%;
+}
+.servicesimg img {
     width: 100%;
 }
 
@@ -159,16 +170,19 @@
     .servicemargin {
         padding-block: 40px 65px;
     }
-    .servicesimmg img {
-        display: none;
+    .flexitems {
+        flex-wrap: wrap-reverse;
+        gap: 20px;
     }
     .servicestext h4 {
         font-size: 32px;
         margin-block: 20px;
     }
     .flexitems {
-        gap: 0px;
         margin-top: 50px;
         margin-inline: 20px;
+    }
+    .flexitemstwo img {
+        display: none;
     }
 }

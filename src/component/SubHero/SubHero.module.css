@@ -1,0 +1,42 @@
+.herocont {
+    background-image: url(../../assets/subherobcg.svg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .herotextcont {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 5%;
+} */
+.herotext {
+    max-width: 329px;
+    margin: auto;
+    padding-top: 5%;
+    text-align: center;
+    color: white;
+}
+.herotext p {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Poppins;
+    margin-block: 0px;
+}
+.herotext h1 {
+    font-family: "Viaoda Libre", Poppins;
+    font-weight: 400;
+    margin-block: 24px 0px;
+    font-size: 64px;
+}
+@media (max-width: 500px) {
+    .herotext {
+        margin-inline: 16px;
+        padding-top: 50%;
+    }
+    .herotext h1 {
+        font-size: 32px;
+        margin-block: 12px;
+    }
+}

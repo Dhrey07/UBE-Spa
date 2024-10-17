@@ -1,0 +1,19 @@
+.getstartedcont {
+    background-color: #FFF8ED;
+    padding-block: 80px 160px;
+    padding-inline: 20px;
+}
+.getstartedmargin {
+    background: #FFF;
+    max-width: 1004px;
+    margin: auto;
+}
+.getstartedmargin h1 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFF8ED;
+    font-family: "Viaoda Libre", Poppins;
+    background-color: #897A64;
+    padding: 18px 24px;
+    border-radius: 4px 4px 0px 0px;
+}

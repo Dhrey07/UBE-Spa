@@ -7,6 +7,7 @@ import Footer from "./component/Footer/Footer";
 import Hero from "./component/Hero/Hero";
 import Services from "./component/Services/Services";
 import PageLoader from "./component/PageLoading/Pageloade";
+import Getstarted from "./pages/getstarted/Getstarted";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               </>
             }
           />
+          <Route path="/get-started" element={<Getstarted />} />
         </Routes>
       </PageLoader>
     </BrowserRouter>

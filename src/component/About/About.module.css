@@ -12,7 +12,7 @@
     text-align: center;
 }
 .aboutheader h4{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
@@ -22,7 +22,7 @@
     font-weight: 400;
     font-family: Poppins;
     color: #897A64;
-    font-size: 18px;
+    font-size: 16px;
 }
 .aboutplayer {
     max-width: 1064px;

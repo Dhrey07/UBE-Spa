@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 import DrawerComp from "./Drawer";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
@@ -35,7 +37,7 @@ const Navbar = () => {
               <p>Contact</p>
             </div>
             <div className={styles.btnstyle}>
-              <Button title="BOOK YOUR VISIT" />
+              <Button onClick={() => navigate("/get-started")} title="BOOK YOUR VISIT" />
             </div>
           </>
         )}
