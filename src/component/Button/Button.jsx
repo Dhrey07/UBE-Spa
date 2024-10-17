@@ -15,10 +15,5 @@ Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
 };
-// Button.defaultProps = {
-//   type: "button",
-//   onClick: () => {},
-//   disabled: false,
-// };
 
 export default Button;
