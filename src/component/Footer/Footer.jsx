@@ -38,7 +38,7 @@ const Footer = () => {
           >
             <div className={styles.verticalinfo}></div>
           </Grid>
-          <Grid item lg={3} md={4} sm={4} xs={12}>
+          <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
               <h4>Contact us</h4>
               <p>(219) 555-0114</p>
@@ -53,7 +53,7 @@ const Footer = () => {
               </div>
             </div>
           </Grid>
-          <Grid item lg={3} md={4} sm={4} xs={12}>
+          <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
               <div className={styles.unveilbtn}>
                 <Button title="BOOK YOUR VISIT" />

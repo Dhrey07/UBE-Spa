@@ -85,4 +85,7 @@
     .margintop {
         margin-top: 15px;
     }
+    .unveilbtn {
+        max-width: 155px;
+    }
 }
