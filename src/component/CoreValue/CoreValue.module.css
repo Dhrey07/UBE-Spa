@@ -16,11 +16,12 @@
     padding-bottom: 120px;
 }
 .marginonly {
-    margin-inline: 80px;
+    margin-inline: 5%;
 }
 
 .valueheader h4{
     font-weight: 400;
+    font-size: 20px;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
     color: #FF69B4;
@@ -33,9 +34,10 @@
 }
 .avaluecont {
     background: white;
-    padding-inline: 40px;
-    max-width: 282px;
+    padding-inline: 30px;
+    max-width: 270px;
     padding-block: 120px;
+    height: 350px;
 }
 .avaluecont img {
     width: 40px;
@@ -48,11 +50,13 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-right: 10px;
 }
 .carouselitem img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    margin-right: 10px;
 }
 .avaluecont h4 {
     max-width: 180px;
@@ -65,7 +69,7 @@
 .corevaluebcg {
     background-image: url(../../assets/corevalue.png);
     background-repeat: no-repeat;
-    padding: 100px 80px;
+    padding: 100px 5%;
     background-size: cover;
     background-position: center;
 }
@@ -96,4 +100,36 @@
     max-width: 180px;
     margin: auto;
     margin-top: 48px;
+}
+
+@media (max-width: 500px) {
+    .valueheader {
+        padding-top: 30px;
+        margin-bottom: 25px;
+    }
+    .corevaluebcg {
+        padding: 30px 5%;
+    }
+    .avaluecont {
+        padding-block: 60px;
+    }
+    .avaluecont h4 {
+        margin-block: 18px 10px;
+    }
+    .unveil {
+        padding-block: 50px;
+        padding-inline: 10px;
+    }
+    .unveil h4 {
+        font-size: 18px;
+    }
+    .unveilbtn {
+        max-width: 160px;
+    }
+    .valuemargin {
+        padding-bottom: 60px;
+    }
+    .carousel {
+        margin-block: 30px;
+    }
 }

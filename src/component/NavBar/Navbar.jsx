@@ -10,7 +10,16 @@ const Navbar = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
-      <Toolbar sx={{ bgcolor: "transparent", paddingTop: "48px", justifyContent: "space-between" }}>
+      <Toolbar
+        sx={{
+          bgcolor: "transparent",
+          paddingTop: "48px",
+          justifyContent: "space-between",
+          "@media (max-width: 500px)": {
+            paddingTop: "20px"
+          }
+        }}
+      >
         <Link to="/">
           <img src={MainLogo} className={`${styles.logo}`} alt="" />
         </Link>

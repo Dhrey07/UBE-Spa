@@ -12,6 +12,7 @@
     text-align: center;
 }
 .aboutheader h4{
+    font-size: 20px;
     font-weight: 400;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
@@ -30,4 +31,12 @@
 .aboutplayer img {
     max-width: 100%;
     margin: auto;
+}
+@media (max-width: 500px) {
+    .aboutheader {
+        margin-inline: 16px;
+    }
+    .aboutmain {
+        padding-block: 40px 70px;
+    }
 }

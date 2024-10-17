@@ -48,8 +48,8 @@ const CoreValue = () => {
             </p>
           </div>
           <div className={styles.corevaluebcg}>
-            <Grid2 container spacing={2}>
-              <Grid2 item lg={4} md={6} sm={12} xs={12}>
+            <Grid2 container spacing={2} sx={{ justifyContent: "center" }}>
+              <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Elegance} alt="" />
                   <h4>Elegance in Every Detail</h4>
@@ -61,7 +61,7 @@ const CoreValue = () => {
                   </p>
                 </div>
               </Grid2>
-              <Grid2 item lg={4} md={6} sm={12} xs={12}>
+              <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Diamond} alt="" />
                   <h4>Serenity as a Sanctuary</h4>
@@ -72,7 +72,7 @@ const CoreValue = () => {
                   </p>
                 </div>
               </Grid2>
-              <Grid2 item lg={4} md={6} sm={12} xs={12}>
+              <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Holistic} alt="" />
                   <h4>Holistic Wellness Fusion</h4>

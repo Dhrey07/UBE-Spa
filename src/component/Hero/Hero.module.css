@@ -1,13 +1,20 @@
 .herocont {
-    background-image: url(../../assets/heroimg.svg);
+    background-image: url(../../assets/newbcgimg.svg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* .herotextcont {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 5%;
+} */
 .herotext {
     max-width: 650px;
     margin: auto;
-    padding-top: 18%;
+    padding-top: 12%;
     text-align: center;
     color: white;
 }
@@ -22,4 +29,14 @@
     font-weight: 400;
     margin-block: 24px 0px;
     font-size: 64px;
+}
+@media (max-width: 500px) {
+    .herotext {
+        margin-inline: 16px;
+        padding-top: 50%;
+    }
+    .herotext h1 {
+        font-size: 32px;
+        margin-block: 12px;
+    }
 }

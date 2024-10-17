@@ -6,7 +6,40 @@
     gap: 32px;
     color: white;
     font-weight: 400;
+    cursor: pointer;
 }
 .btnstyle {
     width: 175px;
+}
+.navbtn {
+    margin-left: auto;
+    /* rgba(0, 0, 0, 0.5)" */
+}
+.navbar p {
+    position: relative;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.navbar p::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #D5A571;
+    transition: width 0.3s ease;
+}
+
+.navbar p:hover::before {
+    width: 100%; /* Full width of the p tag on hover */
+}
+
+.navbar p:hover {
+    color: #f0f0f0; /* Optional: Lighten text color on hover */
+}
+@media (max-width: 500px) {
+    .logo {
+        width: 100px;
+    }
 }

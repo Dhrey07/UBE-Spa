@@ -12,9 +12,12 @@
     max-width: 685px;
     margin: auto;
     text-align: center;
+    padding-inline: 16px;
+    margin-bottom: 50px;
 }
 
 .serviceheader h4{
+    font-size: 20px;
     font-weight: 400;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
@@ -101,7 +104,7 @@
 .mainservice {
     /* width: 100%; */
     margin: auto;
-    margin-inline: 80px;
+    margin-inline: 5%;
 }
 
 .servicestext {
@@ -133,4 +136,39 @@
 
 .servicesimmg img {
     width: 100%;
+}
+
+@media (max-width: 950px) {
+    .hairstyling,
+    .facialstyling,
+    .nailstyling,
+    .waxstyling,
+    .bodystyling,
+    .eyestyling {
+        height: 500px;
+    }
+    .aboutservice h4 {
+        font-size: 20px;
+    }
+    .aboutservice p {
+        margin-block: 8px 0px;
+    }
+    .aboutservice {
+        padding: 20px;
+    }
+    .servicemargin {
+        padding-block: 40px 65px;
+    }
+    .servicesimmg img {
+        display: none;
+    }
+    .servicestext h4 {
+        font-size: 32px;
+        margin-block: 20px;
+    }
+    .flexitems {
+        gap: 0px;
+        margin-top: 50px;
+        margin-inline: 20px;
+    }
 }

@@ -11,12 +11,12 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.footercont}>
         <Grid container spacing={2}>
-          <Grid item lg={2} md={4} sm={4} xs={12}>
+          <Grid item lg={2} md={4} sm={4} xs={6}>
             <div className={styles.margintop}>
               <img src={FooterLogo} alt="" />
             </div>
           </Grid>
-          <Grid item lg={3} md={4} sm={4} xs={12}>
+          <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
               <h4>INFO</h4>
               <p>About Us</p>
@@ -24,7 +24,18 @@ const Footer = () => {
               <p>Contacts</p>
             </div>
           </Grid>
-          <Grid item lg={1} md={4} sm={12} xs={12}>
+          <Grid
+            item
+            lg={1}
+            md={4}
+            sm={12}
+            xs={6}
+            sx={{
+              "@media (max-width: 500px)": {
+                display: "none",
+              },
+            }}
+          >
             <div className={styles.verticalinfo}></div>
           </Grid>
           <Grid item lg={3} md={4} sm={4} xs={12}>

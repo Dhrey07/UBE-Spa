@@ -7,7 +7,7 @@
     max-width: 1440px;
     margin: auto;
     position: relative;
-    padding-inline: 80px;
+    padding-inline: 5%;
     padding-bottom: 80px;
 }
 .margintop {
@@ -70,4 +70,19 @@
     position: absolute;
     display: flex;
     right: 72px;
+}
+
+@media (max-width: 500px) {
+    .verticalinfo {
+        display: none;
+    }
+    .footerinfo {
+        margin-top: 15px;
+    }
+    .footercont {
+        padding-bottom: 60px;
+    }
+    .margintop {
+        margin-top: 15px;
+    }
 }
