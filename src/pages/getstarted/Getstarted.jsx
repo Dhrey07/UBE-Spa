@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 
 const steps = [
-  "Select Category",
+  "Categories",
   "Select Schedule",
   "Input Personal Information",
 ];

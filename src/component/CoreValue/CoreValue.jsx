@@ -23,20 +23,20 @@ const CoreValue = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 5,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
+      items: 1,
+    },
   };
   return (
     <div className={styles.valuecont}>
@@ -94,7 +94,13 @@ const CoreValue = () => {
             </Grid2>
           </Grid2> */}
           <div className={styles.carousel}>
-            <Carousel responsive={responsive}>
+            <Carousel
+              responsive={responsive}
+              autoPlay={true}
+              autoPlaySpeed={2000}
+              infinite={true}
+              transitionDuration={500}
+            >
               <div className={styles.carouselitem}>
                 <img src={CarouselOne} />
               </div>
@@ -131,7 +137,10 @@ const CoreValue = () => {
               curated services is designed to elevate your spirit.
             </h4>
             <div className={styles.unveilbtn}>
-              <Button onClick={() => navigate("/get-started")} title="BOOK YOUR VISIT" />
+              <Button
+                onClick={() => navigate("/get-started")}
+                title="BOOK YOUR VISIT"
+              />
             </div>
           </div>
         </div>

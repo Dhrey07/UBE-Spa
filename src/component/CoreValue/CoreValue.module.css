@@ -69,7 +69,7 @@
 .corevaluebcg {
     background-image: url(../../assets/corevalue.png);
     background-repeat: no-repeat;
-    padding: 100px 5%;
+    padding: 100px 3%;
     background-size: cover;
     background-position: center;
 }
