@@ -78,7 +78,8 @@
 .aboutservice {
     background: white;
     max-width: 363px;
-    padding: 40px;
+    padding: 40px 20px;
+    min-height: 150px;
     position: absolute;
     bottom: 20px;
     left: 20px;
