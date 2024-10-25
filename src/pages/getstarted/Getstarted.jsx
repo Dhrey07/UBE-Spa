@@ -67,6 +67,23 @@ const Getstarted = () => {
   const handleReset = () => {
     setActiveStep(0);
   };
+
+  // useEffect(() => {
+  //   if (activeStep === 1) {
+  //     const script = document.createElement("script");
+  //     script.src = "https://api.schedulicity.com/public/widget/UBE45J9/embed?mainLocation=false";
+  //     script.async = true;
+  //     document.getElementById("schedulicity-container").appendChild(script);
+
+  //     // Cleanup script if necessary
+  //     return () => {
+  //       if (script && script.parentNode) {
+  //         script.parentNode.removeChild(script);
+  //       }
+  //     };
+  //   }
+  // }, [activeStep]);
+
   return (
     <div>
       <SubHero title="Book Your Appointment" />
@@ -163,11 +180,14 @@ const Getstarted = () => {
                 )}
 
                 {/* Conditionally render different content for steps other than the first */}
-                {activeStep === 1 && (
-                  <Typography>Content for Step 2</Typography>
-                )}
+                  {activeStep === 1 && (
+                    <Box sx={{ textAlign: "center", marginTop: "50px" }}>
+                      {/* <Typography>Book your Schedule</Typography> */}
+                      <a href="https://www.schedulicity.com/scheduling/UBE45J9" title="Online scheduling" target="_blank"><img src="https://cdn.schedulicity.com/images/user-widget-buttons/schedule-btn-huckleberry-med-v2.svg" alt="Online scheduling" title="Online scheduling" border="0" /></a>
+                    </Box>
+                  )}
                 {activeStep === 2 && (
-                  <Typography>Content for Step 3</Typography>
+                  <Typography>Contact Information</Typography>
                 )}
                 {/* Add more steps as needed */}
 
