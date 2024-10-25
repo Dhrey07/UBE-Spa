@@ -2,6 +2,7 @@ import SubHero from "../../component/SubHero/SubHero";
 import Footer from "../../component/Footer/Footer";
 import { useState } from "react";
 import styles from "./Getstarted.module.css";
+import { Icon } from "@iconify-icon/react";
 import {
   useMediaQuery,
   useTheme,
@@ -49,6 +50,12 @@ const Getstarted = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const [loading, setLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setLoading(false);
+  };
+
   //   const handleSkip = () => {
   //     if (!isStepOptional(activeStep)) {
   //       // You probably want to guard against something like this,
@@ -67,22 +74,6 @@ const Getstarted = () => {
   const handleReset = () => {
     setActiveStep(0);
   };
-
-  // useEffect(() => {
-  //   if (activeStep === 1) {
-  //     const script = document.createElement("script");
-  //     script.src = "https://api.schedulicity.com/public/widget/UBE45J9/embed?mainLocation=false";
-  //     script.async = true;
-  //     document.getElementById("schedulicity-container").appendChild(script);
-
-  //     // Cleanup script if necessary
-  //     return () => {
-  //       if (script && script.parentNode) {
-  //         script.parentNode.removeChild(script);
-  //       }
-  //     };
-  //   }
-  // }, [activeStep]);
 
   return (
     <div>
@@ -184,6 +175,30 @@ const Getstarted = () => {
                     <Box sx={{ textAlign: "center", marginTop: "50px" }}>
                       {/* <Typography>Book your Schedule</Typography> */}
                       <a href="https://www.schedulicity.com/scheduling/UBE45J9" title="Online scheduling" target="_blank"><img src="https://cdn.schedulicity.com/images/user-widget-buttons/schedule-btn-huckleberry-med-v2.svg" alt="Online scheduling" title="Online scheduling" border="0" /></a>
+                      <div style={{ position: "relative", backgroundColor: "white", width: "100%", height: "100%" }}>
+                          {loading && (
+                            <Icon icon="svg-spinners:tadpole" width="60" height="60"  style={{color:  "#FF69B4", marginTop: "100px" }} />
+                          )}
+                          <iframe
+                            title="Schedulicity Widget"
+                            src="//www.schedulicity.com/scheduling/UBE45J9/services?embed=true"
+                            style={{
+                              border: "none",
+                              width: "100%",
+                              height: "100%",
+                              minHeight: "480px",
+                              padding: "0",
+                              margin: "20px 0px 0px 0px",
+                              zIndex: "1",
+                              opacity: loading ? 0 : 1,  // Initially hidden until loading completes
+                              transition: "opacity 0.3s ease" // Fade-in effect for smoothness
+                            }}
+                            onLoad={handleIframeLoad}
+                            // eslint-disable-next-line react/no-unknown-property
+                            allowTransparency="true"
+                            frameBorder="0"
+                          />
+                        </div>
                     </Box>
                   )}
                 {activeStep === 2 && (
