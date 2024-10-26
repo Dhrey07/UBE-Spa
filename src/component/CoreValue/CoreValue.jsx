@@ -13,31 +13,31 @@ import CarouselSix from "../../assets/carousel6.png";
 import CarouselSeven from "../../assets/carousel7.png";
 import CarouselEight from "../../assets/carousel8.png";
 import CarouselNine from "../../assets/carousel9.png";
-import Carousel from "react-multi-carousel";
+// import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
 
 const CoreValue = () => {
   const navigate = useNavigate();
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  // const responsive = {
+  //   superLargeDesktop: {
+  //     // the naming can be any, depends on you.
+  //     breakpoint: { max: 4000, min: 3000 },
+  //     items: 5,
+  //   },
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //   },
+  // };
   return (
     <div className={styles.valuecont}>
       <div className={styles.valuemargin}>
@@ -93,14 +93,33 @@ const CoreValue = () => {
               <img src="" alt="" />
             </Grid2>
           </Grid2> */}
-          <div className={styles.carousel}>
-            <Carousel
-              responsive={responsive}
-              autoPlay={true}
-              autoPlaySpeed={2000}
-              infinite={true}
-              transitionDuration={500}
-            >
+
+          <div className={styles.logos}>
+            <div className={styles.logos_slide}>
+              <img src={CarouselOne} />
+              <img src={CarouselTwo} />
+              <img src={CarouselThree} />
+              <img src={CarouselFour} />
+              <img src={CarouselFive} />
+              <img src={CarouselSix} />
+              <img src={CarouselSeven} />
+              <img src={CarouselEight} />
+              <img src={CarouselNine} />
+            </div>
+            <div className={styles.logos_slide}>
+              <img src={CarouselOne} />
+              <img src={CarouselTwo} />
+              <img src={CarouselThree} />
+              <img src={CarouselFour} />
+              <img src={CarouselFive} />
+              <img src={CarouselSix} />
+              <img src={CarouselSeven} />
+              <img src={CarouselEight} />
+              <img src={CarouselNine} />
+            </div>
+          </div>
+          {/* <div className={styles.scroll_container}>
+            <div className={styles.scroll_content}>
               <div className={styles.carouselitem}>
                 <img src={CarouselOne} />
               </div>
@@ -128,8 +147,8 @@ const CoreValue = () => {
               <div className={styles.carouselitem}>
                 <img src={CarouselNine} />
               </div>
-            </Carousel>
-          </div>
+            </div>
+          </div> */}
           <div className={styles.unveil}>
             <h4>
               Ready to unveil your true radiance? Look no further than Unlimite

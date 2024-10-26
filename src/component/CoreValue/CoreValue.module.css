@@ -1,136 +1,209 @@
 .valueheader {
-    max-width: 760px;
-    margin: auto;
-    text-align: center;
-    padding-top: 60px;
-    margin-bottom: 50px;
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 50px;
 }
 
 .valuecont {
-    background-color: #FFF8ED;
+  background-color: #fff8ed;
 }
 
 .valuemargin {
-    max-width: 1440px;
-    margin: auto;
-    padding-bottom: 120px;
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 120px;
 }
 .marginonly {
-    margin-inline: 5%;
+  margin-inline: 5%;
 }
 
-.valueheader h4{
-    font-weight: 400;
-    font-size: 24px;
-    font-family: "Viaoda Libre", Poppins;
-    margin-block: 0px;
-    color: #FF69B4;
+.valueheader h4 {
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Viaoda Libre", Poppins;
+  margin-block: 0px;
+  color: #ff69b4;
 }
 .valueheader p {
-    font-weight: 400;
-    font-family: Poppins;
-    color: #897A64;
-    font-size: 18px;
+  font-weight: 400;
+  font-family: Poppins;
+  color: #897a64;
+  font-size: 18px;
 }
 .avaluecont {
-    background: white;
-    padding-inline: 30px;
-    max-width: 270px;
-    padding-block: 120px;
-    height: 350px;
+  background: white;
+  padding-inline: 30px;
+  max-width: 270px;
+  padding-block: 120px;
+  height: 350px;
 }
 .avaluecont img {
-    width: 40px;
+  width: 40px;
 }
 .carousel {
-    margin-block: 80px;
+  margin-block: 80px;
 }
+
+.scroll_container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  display: flex;
+  overflow: hidden;
+  padding: 20px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+/* .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+} */
+
+.logos:hover .logos_slide {
+  animation-play-state: paused;
+}
+
+.logos_slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 60s slide infinite linear;
+}
+
+.logos_slide img {
+  height: auto;
+  margin: 0 10px;
+}
+
 .carouselitem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 10px;
+}
+.scroll_content {
+  display: inline-flex;
+  animation: scroll linear 30s infinite;
 }
 .carouselitem img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    margin-right: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 .avaluecont h4 {
-    max-width: 180px;
-    font-weight: 400;
-    font-size: 28px;
-    color: #FF69B4;
-    margin-block: 40px 24px;
-    font-family: "Viaoda Libre", Poppins;
+  max-width: 180px;
+  font-weight: 400;
+  font-size: 28px;
+  color: #ff69b4;
+  margin-block: 40px 24px;
+  font-family: "Viaoda Libre", Poppins;
 }
 .corevaluebcg {
-    background-image: url(../../assets/corevalue.png);
-    background-repeat: no-repeat;
-    padding: 100px 3%;
-    background-size: cover;
-    background-position: center;
+  background-image: url(../../assets/corevalue.png);
+  background-repeat: no-repeat;
+  padding: 100px 3%;
+  background-size: cover;
+  background-position: center;
 }
 .avaluecont p {
-    font-weight: 400;
-    margin-block: 0px;
-    font-family: Poppins;
-    color: #897A64;
-    font-size: 16px; 
+  font-weight: 400;
+  margin-block: 0px;
+  font-family: Poppins;
+  color: #897a64;
+  font-size: 16px;
 }
 .unveil {
-    max-width: 1280px;
-    margin-block: 30px;
-    padding-block: 141px;
-    background-color: #D5A571;
+  max-width: 1280px;
+  margin-block: 30px;
+  padding-block: 141px;
+  background-color: #d5a571;
 }
 .unveil h4 {
-    margin-block: 0px;
-    font-size: 36px;
-    font-weight: 400;
-    max-width: 670px;
-    margin: auto;
-    font-family: "Viaoda Libre", Poppins;
-    color: rgb(255, 255, 255);
-    text-align: center;
+  margin-block: 0px;
+  font-size: 36px;
+  font-weight: 400;
+  max-width: 670px;
+  margin: auto;
+  font-family: "Viaoda Libre", Poppins;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
 .unveilbtn {
-    max-width: 180px;
-    margin: auto;
-    margin-top: 48px;
+  max-width: 180px;
+  margin: auto;
+  margin-top: 48px;
 }
 
 @media (max-width: 500px) {
-    .valueheader {
-        padding-top: 30px;
-        margin-bottom: 25px;
-    }
-    .corevaluebcg {
-        padding: 30px 5%;
-    }
-    .avaluecont {
-        padding-block: 30px 40px;
-        height: 300px
-    }
-    .avaluecont h4 {
-        margin-block: 18px 10px;
-    }
-    .unveil {
-        padding-block: 50px;
-        padding-inline: 10px;
-    }
-    .unveil h4 {
-        font-size: 18px;
-    }
-    .unveilbtn {
-        max-width: 160px;
-    }
-    .valuemargin {
-        padding-bottom: 60px;
-    }
-    .carousel {
-        margin-block: 30px;
-    }
+  .valueheader {
+    padding-top: 30px;
+    margin-bottom: 25px;
+  }
+  .corevaluebcg {
+    padding: 30px 5%;
+  }
+  .avaluecont {
+    padding-block: 30px 40px;
+    height: 300px;
+  }
+  .avaluecont h4 {
+    margin-block: 18px 10px;
+  }
+  .unveil {
+    padding-block: 50px;
+    padding-inline: 10px;
+  }
+  .unveil h4 {
+    font-size: 18px;
+  }
+  .unveilbtn {
+    max-width: 160px;
+  }
+  .valuemargin {
+    padding-bottom: 60px;
+  }
+  .carousel {
+    margin-block: 30px;
+  }
 }
