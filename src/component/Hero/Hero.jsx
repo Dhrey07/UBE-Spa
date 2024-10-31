@@ -3,12 +3,13 @@ import styles from "./Hero.module.css";
 import Navbar from "../NavBar/Navbar";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 
-const Hero = () => {
+const Hero = ({ servicesRef }) => {
   const navigate = useNavigate();
   return (
     <div className={styles.herocont}>
-      <Navbar />
+      <Navbar servicesRef={servicesRef} />
       <div className={styles.herotextcont}>
         <div className={styles.herotext}>
           {/* <p>TAGLINE</p> */}
@@ -20,6 +21,10 @@ const Hero = () => {
       </div>
     </div>
   );
+};
+
+Hero.propTypes = {
+  servicesRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
 };
 
 export default Hero;

@@ -1,6 +1,7 @@
 // src/App.js
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { useRef } from "react";
 import About from "./component/About/About";
 import CoreValue from "./component/CoreValue/CoreValue";
 import Footer from "./component/Footer/Footer";
@@ -11,6 +12,7 @@ import Getstarted from "./pages/getstarted/Getstarted";
 import ContactUs from "./pages/contactus/Contact";
 
 function App() {
+  const servicesRef = useRef(null);
   return (
     <BrowserRouter>
       <PageLoader>
@@ -19,9 +21,11 @@ function App() {
             path="/"
             element={
               <>
-                <Hero />
+                <Hero servicesRef={servicesRef} />
                 <About />
-                <Services />
+                <div ref={servicesRef}>
+                  <Services />
+                </div>
                 <CoreValue />
                 <Footer />
               </>

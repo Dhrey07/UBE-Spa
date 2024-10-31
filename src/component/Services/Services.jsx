@@ -3,13 +3,23 @@ import { Grid } from "@mui/material";
 import ImageOne from "../../assets/fleximg1.svg";
 import ImageTwo from "../../assets/fleximgtwo.svg";
 import Button from "../Button/Button";
-import { useNavigate } from "react-router-dom";
+import { useRef, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Services = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const servicemarginRef = useRef(null);
+
+  // Check if navigated here with a scroll trigger
+  useEffect(() => {
+    if (location.hash === "#servicemargin" && servicemarginRef.current) {
+      servicemarginRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
   return (
     <div className={styles.servicecont}>
-      <div className={styles.servicemargin}>
+      <div ref={servicemarginRef} className={styles.servicemargin}>
         <div className={styles.serviceheader}>
           <h4>OUR SERVICES</h4>
           <p>

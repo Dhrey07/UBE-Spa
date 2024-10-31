@@ -185,7 +185,7 @@
   }
   .avaluecont {
     padding-block: 30px 40px;
-    height: 300px;
+    height: 320px;
   }
   .avaluecont h4 {
     margin-block: 18px 10px;
@@ -206,4 +206,11 @@
   .carousel {
     margin-block: 30px;
   }
+  .logos_slide {
+    height: calc(50%);
+  }
+  .logos_slide img {
+    height: calc(50%);
+    margin: 0 10px;
+}
 }

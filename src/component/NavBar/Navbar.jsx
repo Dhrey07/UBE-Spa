@@ -4,12 +4,25 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 import DrawerComp from "./Drawer";
-import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ servicesRef }) => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const handleServicesClick = () => {
+    if (location.pathname === "/") {
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/", { replace: true });
+      setTimeout(() => {
+        servicesRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <div>
       <Toolbar
@@ -27,13 +40,13 @@ const Navbar = () => {
         </Link>
         {isMatch ? (
           <>
-            <DrawerComp />
+            <DrawerComp handleServicesClick={handleServicesClick} />
           </>
         ) : (
           <>
             <div className={styles.navbar}>
               <p>Home</p>
-              <p>Services</p>
+              <p onClick={handleServicesClick}>Services</p>
               <p onClick={() => navigate("/contact-us")}>Contact</p>
             </div>
             <div className={styles.btnstyle}>
@@ -44,6 +57,10 @@ const Navbar = () => {
       </Toolbar>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  servicesRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
 };
 
 export default Navbar;

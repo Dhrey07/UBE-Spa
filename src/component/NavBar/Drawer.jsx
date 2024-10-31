@@ -10,17 +10,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./Navbar.module.css";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const pages = ["Home", "Services", "Contact"];
 
-const DrawerComp = () => {
+const DrawerComp = ({ handleServicesClick }) => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const navigate = useNavigate();
 
   // Define the navigation paths corresponding to each page
   const handleNavigation = (page) => {
     if (page === "Home") navigate("/");
-    if (page === "Services") navigate("/");
+    if (page === "Services") handleServicesClick();
     if (page === "Contact") navigate("/contact-us");
   };
 
@@ -57,6 +58,10 @@ const DrawerComp = () => {
       </div>
     </>
   );
+};
+
+DrawerComp.propTypes = {
+  handleServicesClick: PropTypes.func.isRequired,
 };
 
 export default DrawerComp;

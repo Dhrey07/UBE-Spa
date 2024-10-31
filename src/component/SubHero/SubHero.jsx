@@ -3,10 +3,10 @@ import styles from "./SubHero.module.css";
 import Navbar from "../NavBar/Navbar";
 import PropTypes from "prop-types";
 
-const SubHero = ({ title }) => {
+const SubHero = ({ title, servicesRef }) => {
   return (
     <div className={styles.herocont}>
-      <Navbar />
+      <Navbar servicesRef={servicesRef} />
       <div className={styles.herotextcont}>
         <div className={styles.herotext}>
           {/* <p>TAGLINE</p> */}
@@ -18,7 +18,8 @@ const SubHero = ({ title }) => {
 };
 
 SubHero.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  servicesRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
 };
 
 export default SubHero;
