@@ -2,7 +2,7 @@ import styles from "./Footer.module.css";
 import { Grid } from "@mui/material";
 import FooterLogo from "../../assets/footerlogo.svg";
 import Instagram from "../../assets/instagram.svg";
-import Twitter from "../../assets/twitter.png";
+import Tiktok from "../../assets/tiktok.svg";
 import Snapchat from "../../assets/snapchat.png";
 import Gmail from "../../assets/mail.svg";
 import Button from "../Button/Button";
@@ -81,9 +81,9 @@ const Footer = ({ servicesRef }) => {
               </div>
               <div className={styles.footersocials}>
                 <a href="https://www.instagram.com/unlimitedbeautyempire?igsh=MW1mbWY4d3ljNHJ1eQ==" target="_blank"><img src={Instagram} alt="" /></a>
-                <a href="https://www.tiktok.com/@unlimitedbeautyempire" target="_blank"><img src={Twitter} alt="" /></a>
+                <a href="https://www.tiktok.com/@unlimitedbeautyempire" target="_blank"><img src={Tiktok} alt="" /></a>
                 <a href="https://www.snapchat.com/add/unlimitedsalon?share_id=anB8-yOcMlI&locale=en-US" target="_blank"><img src={Snapchat} alt="" /></a>
-                <a href=""><img src={Gmail} alt="" /></a>
+                <a href="mailto:Unlimitedbeautyempire@gmail.com"><img src={Gmail} alt="" /></a>
               </div>
             </div>
           </Grid>
