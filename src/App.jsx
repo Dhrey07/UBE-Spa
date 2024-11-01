@@ -27,7 +27,7 @@ function App() {
                   <Services />
                 </div>
                 <CoreValue />
-                <Footer />
+                <Footer servicesRef={servicesRef} />
               </>
             }
           />

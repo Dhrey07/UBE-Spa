@@ -15,6 +15,7 @@
 }
 .footerinfo {
     margin-top: 40px;
+    cursor: pointer;
 }
 .verticalinfo {
     height: 100%;

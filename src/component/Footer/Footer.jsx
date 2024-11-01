@@ -2,13 +2,25 @@ import styles from "./Footer.module.css";
 import { Grid } from "@mui/material";
 import FooterLogo from "../../assets/footerlogo.svg";
 import Instagram from "../../assets/instagram.svg";
-import Facebook from "../../assets/facebook.svg";
+import Twitter from "../../assets/twitter.png";
+import Snapchat from "../../assets/snapchat.png";
 import Gmail from "../../assets/mail.svg";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Footer = () => {
+const Footer = ({ servicesRef }) => {
   const navigate = useNavigate();
+  const handleServicesClick = () => {
+    if (location.pathname === "/") {
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/", { replace: true });
+      setTimeout(() => {
+        servicesRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
 
   const smoothScrollToTop = () => {
     const scrollDuration = 1000; // Set the duration in milliseconds (1000ms = 1 second)
@@ -41,8 +53,8 @@ const Footer = () => {
             <div className={styles.footerinfo}>
               <h4>INFO</h4>
               <p>About Us</p>
-              <p>Categories</p>
-              <p>Contacts</p>
+              <p onClick={handleServicesClick}>Services</p>
+              <p onClick={() => navigate("/contact-us")}>Contact</p>
             </div>
           </Grid>
           <Grid
@@ -68,9 +80,10 @@ const Footer = () => {
                 <h4>Follow Us</h4>
               </div>
               <div className={styles.footersocials}>
-                <img src={Instagram} alt="" />
-                <img src={Facebook} alt="" />
-                <img src={Gmail} alt="" />
+                <a href="https://www.instagram.com/unlimitedbeautyempire?igsh=MW1mbWY4d3ljNHJ1eQ==" target="_blank"><img src={Instagram} alt="" /></a>
+                <a href="https://www.tiktok.com/@unlimitedbeautyempire" target="_blank"><img src={Twitter} alt="" /></a>
+                <a href="https://www.snapchat.com/add/unlimitedsalon?share_id=anB8-yOcMlI&locale=en-US" target="_blank"><img src={Snapchat} alt="" /></a>
+                <a href=""><img src={Gmail} alt="" /></a>
               </div>
             </div>
           </Grid>
@@ -95,5 +108,10 @@ const Footer = () => {
     </div>
   );
 };
+
+Footer.propTypes = {
+  servicesRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
+};
+
 
 export default Footer;

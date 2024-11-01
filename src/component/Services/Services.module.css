@@ -34,44 +34,44 @@
 .hairstyling {
     background-image: url(../../assets/hairstyling.svg);
     background-repeat: no-repeat;
-    max-width: 410px;
-    height: 600px;
+    max-width: 400px;
+    height: 580px;
     position: relative;
 }
 
 .facialstyling {
     background-image: url(../../assets/facial.svg);
     background-repeat: no-repeat;
-    max-width: 410px;
-    height: 600px;
+    max-width: 400px;
+    height: 580px;
     position: relative;
 }
 .nailstyling {
     background-image: url(../../assets/nails.svg);
     background-repeat: no-repeat;
-    max-width: 410px;
-    height: 600px;
+    max-width: 400px;
+    height: 580px;
     position: relative;
 }
 .waxstyling {
     background-image: url(../../assets/waxing.svg);
     background-repeat: no-repeat;
-    max-width: 410px;
-    height: 600px;
+    max-width: 400px;
+    height: 580px;
     position: relative;
 }
 .bodystyling {
     background-image: url(../../assets/body.svg);
     background-repeat: no-repeat;
-    max-width: 410px;
-    height: 600px;
+    max-width: 400px;
+    height: 580px;
     position: relative;
 }
 .eyestyling {
     background-image: url(../../assets/eyebrow.svg);
     background-repeat: no-repeat;
-    max-width: 410px;
-    height: 600px;
+    max-width: 400px;
+    height: 580px;
     position: relative;
 }
 
