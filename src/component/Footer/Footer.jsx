@@ -24,7 +24,7 @@ const Footer = ({ servicesRef }) => {
 
   const smoothScrollToTop = () => {
     const scrollDuration = 1000; // Set the duration in milliseconds (1000ms = 1 second)
-  
+
     const scrollStep = -window.scrollY / (scrollDuration / 15);
     const scrollInterval = setInterval(() => {
       if (window.scrollY !== 0) {
@@ -80,10 +80,27 @@ const Footer = ({ servicesRef }) => {
                 <h4>Follow Us</h4>
               </div>
               <div className={styles.footersocials}>
-                <a href="https://www.instagram.com/unlimitedbeautyempire?igsh=MW1mbWY4d3ljNHJ1eQ==" target="_blank"><img src={Instagram} alt="" /></a>
-                <a href="https://www.tiktok.com/@unlimitedbeautyempire" target="_blank"><img src={Tiktok} alt="" /></a>
-                <a href="https://www.snapchat.com/add/unlimitedsalon?share_id=anB8-yOcMlI&locale=en-US" target="_blank"><img src={Snapchat} alt="" /></a>
-                <a href="mailto:Unlimitedbeautyempire@gmail.com"><img src={Gmail} alt="" /></a>
+                <a
+                  href="https://www.instagram.com/unlimitedbeautyempire?igsh=MW1mbWY4d3ljNHJ1eQ=="
+                  target="_blank"
+                >
+                  <img src={Instagram} alt="" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@unlimitedbeautyempire"
+                  target="_blank"
+                >
+                  <img src={Tiktok} alt="" />
+                </a>
+                <a
+                  href="https://www.snapchat.com/add/unlimitedsalon?share_id=anB8-yOcMlI&locale=en-US"
+                  target="_blank"
+                >
+                  <img src={Snapchat} alt="" />
+                </a>
+                <a href="mailto:Unlimitedbeautyempire@gmail.com">
+                  <img src={Gmail} alt="" />
+                </a>
               </div>
             </div>
           </Grid>
@@ -91,7 +108,10 @@ const Footer = ({ servicesRef }) => {
             <div className={styles.footerinfo}>
               <div className={styles.unveilbtn}>
                 <Button
-                  onClick={() => navigate("/get-started")}
+                  onClick={() => {
+                    navigate("/get-started");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                   title="BOOK YOUR VISIT"
                 />
               </div>
@@ -110,8 +130,8 @@ const Footer = ({ servicesRef }) => {
 };
 
 Footer.propTypes = {
-  servicesRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
+  servicesRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    .isRequired,
 };
-
 
 export default Footer;

@@ -1,21 +1,27 @@
-// src/App.js
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { Suspense, useRef } from "react";
 import "./App.css";
-import { useRef } from "react";
-import About from "./component/About/About";
-import CoreValue from "./component/CoreValue/CoreValue";
 import Footer from "./component/Footer/Footer";
 import Hero from "./component/Hero/Hero";
-import Services from "./component/Services/Services";
 import PageLoader from "./component/PageLoading/Pageloade";
-import Getstarted from "./pages/getstarted/Getstarted";
-import ContactUs from "./pages/contactus/Contact";
+
+// Lazy load components
+const About = React.lazy(() => import("./component/About/About"));
+const CoreValue = React.lazy(() => import("./component/CoreValue/CoreValue"));
+const Services = React.lazy(() => import("./component/Services/Services"));
+const Getstarted = React.lazy(() => import("./pages/getstarted/Getstarted"));
+const ContactUs = React.lazy(() => import("./pages/contactus/Contact"));
 
 function App() {
   const servicesRef = useRef(null);
+
   return (
     <BrowserRouter>
-      <PageLoader>
+      <Suspense
+        fallback={
+          <PageLoader />
+        }
+      >
         <Routes>
           <Route
             path="/"
@@ -34,7 +40,7 @@ function App() {
           <Route path="/get-started" element={<Getstarted />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
-      </PageLoader>
+      </Suspense>
     </BrowserRouter>
   );
 }
