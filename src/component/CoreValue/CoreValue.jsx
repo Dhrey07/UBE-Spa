@@ -59,7 +59,7 @@ const CoreValue = () => {
       <div className={styles.valuemargin}>
         <div className={styles.marginonly}>
           <div className={styles.elevateheader}>
-            <h4>Elevate Your Journey</h4>
+            <h4>ELEVATE YOUR JOURNEY</h4>
             <p>
               Every detail in our newly built space—from our
               luxurious stations to our comfortable waiting areas—was designed with your experience in mind.
@@ -69,18 +69,18 @@ const CoreValue = () => {
             <img src={TourImg} alt="image player" />
           </div>
           <div className={styles.valueheader}>
-            <h4>OUR CORE VALUE</h4>
-            <p>
+            <h4>WHAT SETS US APART?</h4>
+            {/* <p>
               We are committed to nurturing an environment where elegance and
               serenity converge to embrace your well-being.
-            </p>
+            </p> */}
           </div>
           <div className={styles.corevaluebcg}>
             <Grid2 container spacing={2} sx={{ justifyContent: "center" }}>
               <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Elegance} alt="" />
-                  <h4>Convenience</h4>
+                  <h4>CONVENIENCE</h4>
                   <p>
                     No more multiple appointments at different locations—enjoy
                     all your beauty services in one day, under one roof.
@@ -90,7 +90,7 @@ const CoreValue = () => {
               <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Diamond} alt="" />
-                  <h4>Expert Team</h4>
+                  <h4>EXPERT TEAM</h4>
                   <p>
                     Our experienced professionals are passionate,
                     highly skilled, and committed to quality.
@@ -100,7 +100,7 @@ const CoreValue = () => {
               <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Holistic} alt="" />
-                  <h4>Luxury Experience</h4>
+                  <h4>LUXURY EXPERIENCE</h4>
                   <p>
                     From the moment you walk in, you’ll feel the difference. We offer a high-end, personalized experience with every visit. We invite you to experience beauty without limits.
                      At Unlimited Beauty Empire, we’re here to bring your vision to life with ease, luxury, and convenience.

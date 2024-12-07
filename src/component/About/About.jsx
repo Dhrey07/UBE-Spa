@@ -8,9 +8,12 @@ const About = () => {
         <div className={styles.aboutheader}>
           <h4>ABOUT UNLIMITED BEAUTY EMPIRE</h4>
           <p>
-            Our journey began with a vision to create a sanctuary that goes
-            beyond traditional spas, offering a unique experience that uplifts
-            both the body and spirit.
+            At Unlimited Beauty Empire, we believe beauty is more than just a
+            service—it’s an experience. We’ve created a luxurious,
+            fully-equipped salon and spa in Indianapolis where all your beauty
+            needs can be met under one roof. Say goodbye to running from one
+            appointment to the next. Here, you can enjoy a seamless, relaxing
+            experience while enhancing your unique beauty, all in one place.
           </p>
         </div>
         <div className={styles.aboutplayer}>

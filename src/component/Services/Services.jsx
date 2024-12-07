@@ -23,8 +23,7 @@ const Services = () => {
         <div className={styles.serviceheader}>
           <h4>OUR SERVICES</h4>
           <p>
-            At Unlimited Beauty Empire, we offer a curated selection of services
-            designed to envelop you in an atmosphere of elegance and serenity.
+            We offer a complete suite of premium beauty services;
           </p>
         </div>
         <div className={styles.mainservice}>
@@ -43,7 +42,7 @@ const Services = () => {
             <Grid item lg={4} md={6} sm={12} xs={12}>
               <div className={styles.facialstyling}>
                 <div className={styles.aboutservice}>
-                  <h4>Facial Treatment</h4>
+                  <h4>Facials</h4>
                   {/* <p>
                     Our Serene Hot Stone Massage is a therapeutic escape that
                     transcends the ordinary.
@@ -54,7 +53,7 @@ const Services = () => {
             <Grid item lg={4} md={6} sm={12} xs={12}>
               <div className={styles.nailstyling}>
                 <div className={styles.aboutservice}>
-                  <h4>Nails</h4>
+                  <h4>Nail Care</h4>
                   {/* <p>
                     Our Elegance Renewal Package, an experience designed to
                     revitalise your entire being.
@@ -76,7 +75,7 @@ const Services = () => {
             <Grid item lg={4} md={6} sm={12} xs={12}>
               <div className={styles.bodystyling}>
                 <div className={styles.aboutservice}>
-                  <h4>Body Massage</h4>
+                  <h4>Body Treatments</h4>
                   {/* <p>
                     Our Serene Hot Stone Massage is a therapeutic escape that
                     transcends the ordinary.
@@ -87,7 +86,7 @@ const Services = () => {
             <Grid item lg={4} md={6} sm={12} xs={12}>
               <div className={styles.eyestyling}>
                 <div className={styles.aboutservice}>
-                  <h4>Eyebrows & Threading</h4>
+                  <h4>Make Up</h4>
                   {/* <p>
                     Our Elegance Renewal Package, an experience designed to
                     revitalise your entire being.

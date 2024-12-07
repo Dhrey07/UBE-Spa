@@ -3,7 +3,7 @@
   margin: auto;
   text-align: center;
   padding-top: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .elevateheader {
@@ -28,9 +28,9 @@
 
 .elevateheader h4 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   font-family: Inter, Poppins;
-  margin-block: 0px;
+  margin-block: 0px 32px;
   color: #DF836E;
 }
 .elevateheader p {
@@ -45,7 +45,7 @@
   font-size: 24px;
   font-family: "Viaoda Libre", Poppins;
   margin-block: 0px;
-  color: #ff69b4;
+  color: #DF836E;
 }
 .valueheader p {
   font-weight: 400;

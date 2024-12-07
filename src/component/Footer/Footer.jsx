@@ -8,7 +8,7 @@ import Gmail from "../../assets/mail.svg";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, startTransition } from "react";
 import Modal from "../Modal";
 import { Icon } from "@iconify-icon/react";
 
@@ -52,6 +52,13 @@ const Footer = ({ servicesRef }) => {
       }
     }, 40); // The interval of scrolling (15ms for smoothness)
   };
+
+  const handleRouteChange = (path) => {
+    startTransition(() => {
+      navigate(path);
+    });
+  };
+
   return (
     <div className={styles.footer}>
       <div className={styles.footercont}>
@@ -70,9 +77,9 @@ const Footer = ({ servicesRef }) => {
           <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
               <h4>INFO</h4>
-              <p>About Us</p>
+              <p onClick={() => handleRouteChange("/about-us")}>About Us</p>
               <p onClick={handleServicesClick}>Services</p>
-              <p onClick={() => navigate("/contact-us")}>Contact</p>
+              <p onClick={() => handleRouteChange("/contact-us")}>Contact uS</p>
             </div>
           </Grid>
           <Grid
