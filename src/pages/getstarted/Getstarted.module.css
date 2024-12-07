@@ -82,7 +82,7 @@
   font-size: 28px;
   color: #fff;
   margin-block: 0px;
-  font-family: "Viaoda Libre", Poppins;
+  font-family: "Viaoda Libre", Inter;
 }
 .stepitem {
   margin-block: 30px;
@@ -108,7 +108,7 @@
   max-width: 523px;
 }
 .servicestext h1 {
-  font-family: "Viaoda Libre", Poppins;
+  font-family: "Viaoda Libre", Inter;
   font-weight: 400;
   margin-block: 24px 0px;
   font-size: 32px;
@@ -144,7 +144,7 @@
 .serviceheader h4 {
   font-size: 24px;
   font-weight: 400;
-  font-family: "Viaoda Libre", Poppins;
+  font-family: "Viaoda Libre", Inter;
   margin-block: 0px;
   color: #DF836E;
 }
@@ -154,7 +154,7 @@
 
 .serviceheader p {
   font-weight: 300;
-  font-family: Poppins;
+  font-family: Inter;
   color: #62232c;
   font-size: 18px;
 }
@@ -192,7 +192,7 @@
   color: #df836e;
   margin-block: 0px;
   text-align: center;
-  font-family: "Viaoda Libre", Poppins;
+  font-family: "Viaoda Libre", Inter;
 }
 
 .aboutservice p {
@@ -272,7 +272,7 @@
   font-weight: 400;
   max-width: 670px;
   margin: auto;
-  font-family: "Viaoda Libre", Poppins;
+  font-family: "Viaoda Libre", Inter;
   color: rgb(255, 255, 255);
   text-align: center;
 }

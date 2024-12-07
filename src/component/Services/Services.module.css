@@ -26,7 +26,7 @@
 
 .serviceheader p {
     font-weight: 300;
-    font-family: Poppins;
+    font-family: Inter;
     color: rgba(98, 35, 44, 1);
     font-size: 18px;
 }
@@ -105,7 +105,7 @@
     font-weight: 400;
     font-size: 16px;
     color: #897A64;
-    font-family: Poppins;
+    font-family: Inter;
     margin-block: 16px 0px;
 }
 
