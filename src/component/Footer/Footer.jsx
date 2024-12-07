@@ -76,10 +76,10 @@ const Footer = ({ servicesRef }) => {
           </Grid>
           <Grid item lg={3} md={4} sm={4} xs={6}>
             <div className={styles.footerinfo}>
-              <h4>INFO</h4>
+              <h4>Info</h4>
               <p onClick={() => handleRouteChange("/about-us")}>About Us</p>
               <p onClick={handleServicesClick}>Services</p>
-              <p onClick={() => handleRouteChange("/contact-us")}>Contact uS</p>
+              <p onClick={() => handleRouteChange("/contact-us")}>Contact Us</p>
             </div>
           </Grid>
           <Grid
