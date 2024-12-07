@@ -183,10 +183,10 @@
   background-position: center;
 }
 .avaluecont p {
-  font-weight: 400;
+  font-weight: 300;
   margin-block: 0px;
-  font-family: Poppins;
-  color: #897a64;
+  font-family: Inter;
+  color: #62232C;
   font-size: 16px;
 }
 .unveil {

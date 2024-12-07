@@ -19,11 +19,11 @@
     color: rgba(223, 131, 110, 1);
 }
 .aboutheader p {
-    font-weight: 400;
-    font-family: Poppins;
+    font-weight: 300;
+    font-family: Inter;
     color: rgba(98, 35, 44, 1);
     margin-bottom: 40px;
-    font-size: 16px;
+    font-size: 18px;
 }
 .aboutplayer {
     max-width: 1064px;
