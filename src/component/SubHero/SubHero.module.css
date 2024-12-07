@@ -1,6 +1,6 @@
 .herocont {
     background-image: url(../../assets/subherobcg.svg);
-    height: 65vh;
+    height: 50vh; /* Takes 50% of the viewport height */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -14,9 +14,12 @@
 .herotext {
     max-width: 329px;
     margin: auto;
-    padding-top: 5%;
+    padding-top: 3%;
     text-align: center;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 .herotext p {
     font-weight: 400;

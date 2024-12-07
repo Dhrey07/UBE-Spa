@@ -19,15 +19,15 @@
     color: white;
 }
 .herotext p {
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 24px;
     font-family: Poppins;
     margin-block: 0px;
 }
 .herotext h1 {
     font-family: "Viaoda Libre", Poppins;
     font-weight: 400;
-    margin-block: 24px 0px;
+    margin-block: 16px 0px;
     font-size: 64px;
 }
 .btnstyle {

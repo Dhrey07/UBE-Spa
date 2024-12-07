@@ -1,0 +1,67 @@
+/* STYLING FOR MODAL */
+.modalpopup{
+    width: 620px;
+    max-width: 100%;
+    position: relative;
+}
+.modalinfo{
+    margin-block: 0rem 2rem;
+    margin-inline: 2rem;
+    position: relative;
+}
+.css153eyq5MuiModalrootMuiDialogroot .MuiDialogContentroot {
+    padding: 0px!important;
+}
+.modaltitle{
+    color: #1A1A21;
+    font-size: 18px;
+    margin-bottom: 0px
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    padding-block: 2rem 0px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+  }
+.texttag{
+    color: rgba(102, 113, 133, 1);
+    font-size: 16px !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.5px;
+}
+.addclassheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: -moz-hidden-unscrollable;
+    /* margin-bottom: 10px; */
+    position: relative
+}
+.addclassheader h4{
+    letter-spacing: -0.3px;
+}
+.addclassheader img {
+    cursor: pointer;
+}
+.css1t1j96hMuiPaperrootMuiDialogpaper{
+    width: 100%;
+    padding: 0px !important;
+    margin-bottom: 32px !important;
+    border-bottom: none !important;
+    height: fit-content !important;
+    border: 2px solid rgba(213, 165, 113, 1);
+    border-radius: 8px;
+}
+
+@media (max-width: 426px) {
+    .extrasubject{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .texttag{
+        font-size: 14px !important;
+    }
+}

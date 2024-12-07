@@ -1,305 +1,280 @@
 import SubHero from "../../component/SubHero/SubHero";
 import Footer from "../../component/Footer/Footer";
-import { useState } from "react";
+// import { useState } from "react";
+import ImageTwo from "../../assets/aboutoil.png";
 import styles from "./Getstarted.module.css";
+// import { Grid } from "@mui/material";
+import { useState } from "react";
+import { Box } from "@mui/material";
 import { Icon } from "@iconify-icon/react";
-import {
-  useMediaQuery,
-  useTheme,
-  Box,
-  Stepper,
-  Step,
-  StepLabel,
-  Typography,
-  Button,
-  Grid,
-} from "@mui/material";
-
-const steps = [
-  "Categories",
-  "Select Schedule",
-  "Input Personal Information",
-];
+import Modal from "../../component/Modal";
+import Grid from "@mui/material/Grid2";
+import GalleryOne from "../../assets/galleryone.png";
+import Button from "../../component/Button/Button";
+import Beards from "../../assets/beards.png";
+import NailGallery from "../../assets/nailfour.png";
+import BeardsFive from "../../assets/beardsfive.png";
+import BackMassage from "../../assets/backmassage.png";
+import EyeBrow from "../../assets/eyebrowgallery.png";
+// import { Icon } from "@iconify-icon/react";
+// import {
+//   useMediaQuery,
+//   useTheme,
+//   Box,
+//   Stepper,
+//   Step,
+//   StepLabel,
+//   Typography,
+//   Button,
+//   Grid,
+// } from "@mui/material";
 
 const Getstarted = () => {
-  const [activeStep, setActiveStep] = useState(0);
-  const [skipped, setSkipped] = useState(new Set());
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
-
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
-
-  const handleNext = () => {
-    let newSkipped = skipped;
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values());
-      newSkipped.delete(activeStep);
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped(newSkipped);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
   const [loading, setLoading] = useState(true);
-
+  const [scheduleModal, setScheduleModal] = useState(false);
   const handleIframeLoad = () => {
     setLoading(false);
   };
 
-  //   const handleSkip = () => {
-  //     if (!isStepOptional(activeStep)) {
-  //       // You probably want to guard against something like this,
-  //       // it should never occur unless someone's actively trying to break something.
-  //       throw new Error("You can't skip a step that isn't optional.");
-  //     }
+  const handleSchduleModal = () => {
+    setScheduleModal(!scheduleModal);
+  };
 
-  //     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  //     setSkipped((prevSkipped) => {
-  //       const newSkipped = new Set(prevSkipped.values());
-  //       newSkipped.add(activeStep);
-  //       return newSkipped;
-  //     });
-  //   };
-
-  const handleReset = () => {
-    setActiveStep(0);
+  const handleCloseModal = () => {
+    setScheduleModal(false);
   };
 
   return (
     <div>
-      <SubHero title="Book Your Appointment" />
-      <div className={styles.getstartedcont}>
-        <div className={styles.getstartedmargin}>
-          <h1>Please Select Appointment Details</h1>
-          <Box
-            sx={{
-              width: "100%",
-              padding: isSmallScreen ? "16px" : "32px", // Padding adjusts based on screen size
-              boxSizing: "border-box",
-            }}
-          >
-            <Stepper
-              activeStep={activeStep}
-              orientation={isSmallScreen ? "vertical" : "horizontal"}
+      <SubHero title="About Us" />
+      <div className={styles.valuemargin}>
+        <div className={styles.marginonly}>
+          <div className={styles.flexitemstwo}>
+            <div className={styles.servicestext}>
+              <h1>
+                Welcome to Unlimited Beauty Empire, Indianapolis’ premier
+                all-in-one luxury salon and spa, designed to bring you every
+                beauty service under one roof.
+              </h1>
+              <h4>
+                We believe that self-care and beauty should be a relaxing,
+                convenient, and indulgent experience, whether you’re seeking a
+                fresh haircut, a rejuvenating facial, or a total makeover.
+              </h4>
+              <h4 className="margin-top">
+                At Unlimited Beauty Empire, we’re more than just a salon; we’re
+                a sanctuary. Our newly built, modern space is dedicated to
+                meeting the unique beauty needs of every client, all in one
+                convenient location. We offer a full range of services, from
+                hairstyling and wig installations to professional makeup, nail
+                care, waxing, and body enhancements. With skilled specialists in
+                every field — from lash artists and aestheticians to nail
+                technicians and barbers — we are here to make you feel
+                confident, radiant, and pampered.
+              </h4>
+            </div>
+            <div className={styles.servicesimg}>
+              <img src={ImageTwo} alt="" />
+            </div>
+          </div>
+          <div className={styles.serviceheader}>
+            <h4>VIEW OUR GALLERY</h4>
+            <p>
+              We’re proud to be a destination where you can relax, recharge, and
+              walk out feeling your best. Whether you’re getting ready for a
+              special event, treating yourself to a spa day, or simply enhancing
+              your everyday style, we’re here to make every step of your beauty
+              journey easy, enjoyable, and luxurious. Welcome to your new beauty
+              home. Welcome to Unlimited Beauty Empire.
+            </p>
+          </div>
+          <div className={styles.mainservice}>
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                // justifyContent: { xs: "center" },
+                textAlign: { xs: "center" },
+              }}
             >
-              {steps.map((label, index) => {
-                const stepProps = {};
-                const labelProps = {};
-                if (isStepOptional(index)) {
-                  labelProps.optional = (
-                    <Typography variant="caption"></Typography>
-                  );
-                }
-                if (isStepSkipped(index)) {
-                  stepProps.completed = false;
-                }
-                return (
-                  <Step key={label} {...stepProps}>
-                    <StepLabel {...labelProps}>{label}</StepLabel>
-                  </Step>
-                );
-              })}
-            </Stepper>
-
-            {activeStep === steps.length ? (
-              <>
-                <Typography sx={{ mt: 2, mb: 1 }}>
-                  All steps completed - Thank You
-                </Typography>
-                <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-                  <Box sx={{ flex: "1 1 auto" }} />
-                  <Button onClick={handleReset}>Reset</Button>
-                </Box>
-              </>
-            ) : (
-              <div className={styles.stepitem}>
-                {activeStep === 0 && (
-                  <Grid container spacing={2}>
-                    <Grid item lg={4} md={4} sm={6} xs={12}>
-                      <div className={styles.hairstyling}>
-                        <div className={styles.aboutservice}>
-                          <h4>Hair Styling</h4>
+              <Grid size={{ lg: 4, md: 4, sm: 6, xs: 12 }}>
+                <div className={styles.gallery}>
+                  <img src={GalleryOne} alt="1st gallery" />
+                </div>
+              </Grid>
+              <Grid size={{ lg: 8, md: 8, sm: 6, xs: 12 }}>
+                <Grid container spacing={1}>
+                  <Grid size={{ lg: 6, md: 6, sm: 12, xs: 12 }}>
+                    <Grid container spacing={2}>
+                      <Grid size={{ lg: 12, md: 12, sm: 12, xs: 12 }}>
+                        <div className={styles.gallery}>
+                          <img src={Beards} alt="2nd gallery" />
                         </div>
-                      </div>
-                    </Grid>
-                    <Grid item lg={4} md={4} sm={6} xs={12}>
-                      <div className={styles.face}>
-                        <div className={styles.aboutservice}>
-                          <h4>Facial Treatment</h4>
+                      </Grid>
+                      <Grid size={{ lg: 12, md: 12, sm: 12, xs: 12 }}>
+                        <div className={styles.gallery}>
+                          <img src={Beards} alt="2nd gallery" />
                         </div>
-                      </div>
-                    </Grid>
-                    <Grid item lg={4} md={4} sm={6} xs={12}>
-                      <div className={styles.nails}>
-                        <div className={styles.aboutservice}>
-                          <h4>Nails</h4>
-                        </div>
-                      </div>
-                    </Grid>
-                    <Grid item lg={4} md={4} sm={6} xs={12}>
-                      <div className={styles.waxing}>
-                        <div className={styles.aboutservice}>
-                          <h4>Waxing</h4>
-                        </div>
-                      </div>
-                    </Grid>
-                    <Grid item lg={4} md={4} sm={6} xs={12}>
-                      <div className={styles.massage}>
-                        <div className={styles.aboutservice}>
-                          <h4>Body Massage</h4>
-                        </div>
-                      </div>
-                    </Grid>
-                    <Grid item lg={4} md={4} sm={6} xs={12}>
-                      <div className={styles.eyebrow}>
-                        <div className={styles.aboutservice}>
-                          <h4>Eyebrows</h4>
-                        </div>
-                      </div>
+                      </Grid>
                     </Grid>
                   </Grid>
-                )}
-
-                {/* Conditionally render different content for steps other than the first */}
-                  {activeStep === 1 && (
-                    <Box sx={{ textAlign: "center", marginTop: "50px" }}>
-                      {/* <Typography>Book your Schedule</Typography> */}
-                      <a href="https://www.schedulicity.com/scheduling/UBE45J9" title="Online scheduling" target="_blank"><img src="https://cdn.schedulicity.com/images/user-widget-buttons/schedule-btn-huckleberry-med-v2.svg" alt="Online scheduling" title="Online scheduling" border="0" /></a>
-                      <div style={{ position: "relative", backgroundColor: "white", width: "100%", height: "100%" }}>
-                          {loading && (
-                            <Icon icon="svg-spinners:tadpole" width="60" height="60"  style={{color:  "#FF69B4", marginTop: "100px" }} />
-                          )}
-                          <iframe
-                            title="Schedulicity Widget"
-                            src="//www.schedulicity.com/scheduling/UBE45J9/services?embed=true"
-                            style={{
-                              border: "none",
-                              width: "100%",
-                              height: "100%",
-                              minHeight: "480px",
-                              padding: "0",
-                              margin: "20px 0px 0px 0px",
-                              zIndex: "1",
-                              opacity: loading ? 0 : 1,  // Initially hidden until loading completes
-                              transition: "opacity 0.3s ease" // Fade-in effect for smoothness
-                            }}
-                            onLoad={handleIframeLoad}
-                            // eslint-disable-next-line react/no-unknown-property
-                            allowTransparency="true"
-                            frameBorder="0"
-                          />
-                        </div>
-                    </Box>
-                  )}
-                {activeStep === 2 && (
-                  <Typography>Contact Information</Typography>
-                )}
-                {/* Add more steps as needed */}
-
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    gap: "16px",
-                    width: "250px",
-                    margin: "auto",
-                    alignItems: "center",
-                    pt: 2,
-                  }}
-                >
-                  <Button
-                    onClick={handleNext}
-                    sx={{
-                      backgroundColor: "#897A64",
-                      marginBlock: "30px",
-                      paddingBlock: "16px",
-                      color: "white",
-                      "&:hover": {
-                        backgroundColor: "#6e634e",
-                      },
-                      "& button": {
-                        color: "#FFF !important",
-                      },
-                    }}
-                    variant="contained"
-                  >
-                    {activeStep === steps.length - 1 ? "Finish" : "Proceed"}
-                  </Button>
-                  <Button
-                    color="inherit"
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                    sx={{
-                      mr: 1,
-                      display: activeStep > 0 ? "block" : "none",
-                      backgroundColor: "transparent",
-                      border: "1px solid #897A64",
-                      padding: "16px 24px",
-                      color: "black",
-                    }}
-                  >
-                    Back
-                  </Button>
-                </Box>
-              </div>
-            )}
-          </Box>
+                  <Grid size={{ lg: 6, md: 6, sm: 12, xs: 12 }}>
+                    <div className={styles.gallery}>
+                      <img src={NailGallery} alt="4th gallery" />
+                    </div>
+                  </Grid>
+                  <Grid size={{ lg: 12, md: 12, sm: 12, xs: 12 }}>
+                    <div className={styles.gallery}>
+                      <img src={BeardsFive} alt="5th gallery" />
+                    </div>
+                  </Grid>
+                  <Grid size={{ lg: 6, md: 6, sm: 12, xs: 12 }}>
+                    <div className={styles.gallery}>
+                      <img src={BackMassage} alt="6th gallery" />
+                    </div>
+                  </Grid>
+                  <Grid size={{ lg: 6, md: 6, sm: 12, xs: 12 }}>
+                    <div className={styles.gallery}>
+                      <img src={EyeBrow} alt="7thth gallery" />
+                    </div>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          </div>
+          <div className={styles.elevateheader}>
+            <h4>MEET OUR TEAM</h4>
+            <p>
+              Our talented team takes pride in delivering personalized care and
+              exceptional results, helping you express your unique beauty with
+              every visit.
+            </p>
+          </div>
+          <div className={styles.mainservice}>
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                justifyContent: { xs: "center" },
+                textAlign: { xs: "center" },
+              }}
+            >
+              <Grid size={{ lg: 3, md: 4, sm: 6, xs: 12 }}>
+                <div className={styles.team1}>
+                  <div className={styles.aboutservice}>
+                    <h4>Aminat Adams</h4>
+                    <p>CEO</p>
+                  </div>
+                </div>
+              </Grid>
+              <Grid size={{ lg: 3, md: 4, sm: 6, xs: 12 }}>
+                <div className={styles.team1}>
+                  <div className={styles.aboutservice}>
+                    <h4>Aminat Adams</h4>
+                    <p>CEO</p>
+                  </div>
+                </div>
+              </Grid>
+              <Grid size={{ lg: 3, md: 4, sm: 6, xs: 12 }}>
+                <div className={styles.team1}>
+                  <div className={styles.aboutservice}>
+                    <h4>Aminat Adams</h4>
+                    <p>CEO</p>
+                  </div>
+                </div>
+              </Grid>
+              <Grid size={{ lg: 3, md: 4, sm: 6, xs: 12 }}>
+                <div className={styles.team1}>
+                  <div className={styles.aboutservice}>
+                    <h4>Aminat Adams</h4>
+                    <p>CEO</p>
+                    {/* <p>
+                    Indulge in the ultimate pampering experience with our
+                    Tranquil Radiance Facial
+                  </p> */}
+                  </div>
+                </div>
+              </Grid>
+            </Grid>
+          </div>
+          <div className={styles.unveil}>
+            <h4>
+              Ready to unveil your true radiance? Look no further than Unlimite
+              d Beauty Empire, your oasis of elegance & serenity. Our array of
+              curated services is designed to elevate your spirit.
+            </h4>
+            <div className={styles.unveilbtn}>
+              <Button
+                onClick={handleSchduleModal}
+                title="BOOK YOUR VISIT"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      {/* <Grid container spacing={2}>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <div className={styles.hairstyling}>
-            <div className={styles.aboutservice}>
-              <h4>Hair Styling</h4>
-            </div>
-          </div>
-        </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <div className={styles.face}>
-            <div className={styles.aboutservice}>
-              <h4>Facial Treatment</h4>
-            </div>
-          </div>
-        </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <div className={styles.nails}>
-            <div className={styles.aboutservice}>
-              <h4>Nails</h4>
-            </div>
-          </div>
-        </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <div className={styles.waxing}>
-            <div className={styles.aboutservice}>
-              <h4>Waxing</h4>
-            </div>
-          </div>
-        </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <div className={styles.massage}>
-            <div className={styles.aboutservice}>
-              <h4>Body Massage</h4>
-            </div>
-          </div>
-        </Grid>
-        <Grid item lg={3} md={4} sm={6} xs={12}>
-          <div className={styles.eyebrow}>
-            <div className={styles.aboutservice}>
-              <h4>Eyebrows</h4>
-            </div>
-          </div>
-        </Grid>
-      </Grid> */}
+      <Modal
+        title=""
+        modalContent={
+          <>
+            <Box sx={{ textAlign: "center", marginTop: "50px" }}>
+              <a
+                href="https://www.schedulicity.com/scheduling/UBE45J9"
+                title="Online scheduling"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.schedulicity.com/images/user-widget-buttons/schedule-btn-huckleberry-med-v2.svg"
+                  alt="Online scheduling"
+                  title="Online scheduling"
+                  border="0"
+                />
+              </a>
+              <div
+                style={{
+                  position: "relative",
+                  backgroundColor: "white",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                {loading && (
+                  <Icon
+                    icon="svg-spinners:tadpole"
+                    width="60"
+                    height="60"
+                    style={{ color: "#FF69B4", marginTop: "100px" }}
+                  />
+                )}
+                <iframe
+                  title="Schedulicity Widget"
+                  src="//www.schedulicity.com/scheduling/UBE45J9/services?embed=true"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    height: "100%",
+                    minHeight: "480px",
+                    padding: "0",
+                    margin: "20px 0px 0px 0px",
+                    zIndex: "1",
+                    opacity: loading ? 0 : 1,
+                    transition: "opacity 0.3s ease",
+                  }}
+                  onLoad={handleIframeLoad}
+                  // eslint-disable-next-line react/no-unknown-property
+                  allowTransparency="true"
+                  frameBorder="0"
+                />
+              </div>
+            </Box>
+          </>
+        }
+        modalFooter={
+          <>
+          </>
+        }
+        isopen={scheduleModal}
+        closeModal={handleCloseModal}
+      />
       <Footer />
     </div>
   );

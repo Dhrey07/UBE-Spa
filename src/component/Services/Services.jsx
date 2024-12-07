@@ -1,13 +1,13 @@
 import styles from "./Services.module.css";
 import { Grid } from "@mui/material";
-import ImageOne from "../../assets/fleximg1.svg";
-import ImageTwo from "../../assets/fleximgtwo.svg";
-import Button from "../Button/Button";
+// import ImageOne from "../../assets/fleximg1.svg";
+// import ImageTwo from "../../assets/fleximgtwo.svg";
+// import Button from "../Button/Button";
 import { useRef, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
   const servicemarginRef = useRef(null);
 
@@ -32,11 +32,11 @@ const Services = () => {
             <Grid item lg={4} md={6} sm={12} xs={12}>
               <div className={styles.hairstyling}>
                 <div className={styles.aboutservice}>
-                  <h4>Hair Styling</h4>
-                  <p>
+                  <h4>Hair Styling & Braiding</h4>
+                  {/* <p>
                     Indulge in the ultimate pampering experience with our
                     Tranquil Radiance Facial
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Grid>
@@ -44,10 +44,10 @@ const Services = () => {
               <div className={styles.facialstyling}>
                 <div className={styles.aboutservice}>
                   <h4>Facial Treatment</h4>
-                  <p>
+                  {/* <p>
                     Our Serene Hot Stone Massage is a therapeutic escape that
                     transcends the ordinary.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Grid>
@@ -55,10 +55,10 @@ const Services = () => {
               <div className={styles.nailstyling}>
                 <div className={styles.aboutservice}>
                   <h4>Nails</h4>
-                  <p>
+                  {/* <p>
                     Our Elegance Renewal Package, an experience designed to
                     revitalise your entire being.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Grid>
@@ -66,10 +66,10 @@ const Services = () => {
               <div className={styles.waxstyling}>
                 <div className={styles.aboutservice}>
                   <h4>Waxing</h4>
-                  <p>
+                  {/* <p>
                     Indulge in the ultimate pampering experience with our
                     Tranquil Radiance Facial
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Grid>
@@ -77,10 +77,10 @@ const Services = () => {
               <div className={styles.bodystyling}>
                 <div className={styles.aboutservice}>
                   <h4>Body Massage</h4>
-                  <p>
+                  {/* <p>
                     Our Serene Hot Stone Massage is a therapeutic escape that
                     transcends the ordinary.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Grid>
@@ -88,15 +88,15 @@ const Services = () => {
               <div className={styles.eyestyling}>
                 <div className={styles.aboutservice}>
                   <h4>Eyebrows & Threading</h4>
-                  <p>
+                  {/* <p>
                     Our Elegance Renewal Package, an experience designed to
                     revitalise your entire being.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Grid>
           </Grid>
-          <div className={styles.flexitems}>
+          {/* <div className={styles.flexitems}>
             <div className={styles.servicesimmg}>
               <img src={ImageOne} alt="" />
             </div>
@@ -125,7 +125,7 @@ const Services = () => {
             <div className={styles.servicesimg}>
               <img src={ImageTwo} alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

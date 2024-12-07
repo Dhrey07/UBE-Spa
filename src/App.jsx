@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Suspense, useRef } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import React, { useRef, useState, useEffect } from "react";
 import "./App.css";
 import Footer from "./component/Footer/Footer";
 import Hero from "./component/Hero/Hero";
@@ -14,34 +14,38 @@ const ContactUs = React.lazy(() => import("./pages/contactus/Contact"));
 
 function App() {
   const servicesRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
+
+  // Track route changes and show loader
+  useEffect(() => {
+    setLoading(true); // Show the loader when the route changes
+    const timer = setTimeout(() => setLoading(false), 5000); // Simulate loading for smooth transitions
+    return () => clearTimeout(timer); // Clear timeout on unmount
+  }, [location]);
 
   return (
-    <BrowserRouter>
-      <Suspense
-        fallback={
-          <PageLoader />
-        }
-      >
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero servicesRef={servicesRef} />
-                <About />
-                <div ref={servicesRef}>
-                  <Services />
-                </div>
-                <CoreValue />
-                <Footer servicesRef={servicesRef} />
-              </>
-            }
-          />
-          <Route path="/get-started" element={<Getstarted />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <>
+      {loading && <PageLoader />}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero servicesRef={servicesRef} />
+              <About />
+              <div ref={servicesRef}>
+                <Services />
+              </div>
+              <CoreValue />
+              <Footer servicesRef={servicesRef} />
+            </>
+          }
+        />
+        <Route path="/about-us" element={<Getstarted />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+      </Routes>
+    </>
   );
 }
 

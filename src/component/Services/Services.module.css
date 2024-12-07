@@ -21,65 +21,71 @@
     font-weight: 400;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
-    color: #FF69B4;
+    color: rgba(223, 131, 110, 1);
 }
 
 .serviceheader p {
     font-weight: 400;
     font-family: Poppins;
-    color: #897A64;
+    color: rgba(98, 35, 44, 1);
     font-size: 16px;
 }
 
 .hairstyling {
     background-image: url(../../assets/hairstyling.svg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
-    height: 580px;
+    height: 332px;
     position: relative;
 }
 
 .facialstyling {
     background-image: url(../../assets/facial.svg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
-    height: 580px;
+    height: 332px;
     position: relative;
 }
 .nailstyling {
     background-image: url(../../assets/nails.svg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
-    height: 580px;
+    height: 332px;
     position: relative;
 }
 .waxstyling {
     background-image: url(../../assets/waxing.svg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
-    height: 580px;
+    height: 332px;
     position: relative;
 }
 .bodystyling {
     background-image: url(../../assets/body.svg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
-    height: 580px;
+    height: 332px;
     position: relative;
 }
 .eyestyling {
     background-image: url(../../assets/eyebrow.svg);
     background-repeat: no-repeat;
+    background-position: center;
     max-width: 400px;
-    height: 580px;
+    height: 332px;
     position: relative;
 }
 
 .aboutservice {
     background: white;
     max-width: 363px;
-    padding: 40px 20px;
-    min-height: 150px;
+    padding: 32px 20px;
+    /* min-height: 150px; */
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -89,8 +95,9 @@
 .aboutservice h4 {
     font-weight: 400;
     font-size: 28px;
-    color: #FF69B4;
+    color: rgba(223, 131, 110, 1);
     margin-block: 0px;
+    text-align: center;
     font-family: "Viaoda Libre", Poppins;
 }
 
@@ -151,14 +158,14 @@
 }
 
 @media (max-width: 950px) {
-    .hairstyling,
+    /* .hairstyling,
     .facialstyling,
     .nailstyling,
     .waxstyling,
     .bodystyling,
     .eyestyling {
         height: 500px;
-    }
+    } */
     .aboutservice h4 {
         font-size: 20px;
     }

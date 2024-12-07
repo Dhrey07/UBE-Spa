@@ -2,8 +2,10 @@ import styles from "./CoreValue.module.css";
 import Elegance from "../../assets/elegance.svg";
 import Diamond from "../../assets/diamond.svg";
 import Holistic from "../../assets/holistic.svg";
-import { Grid2 } from "@mui/material";
+import TourImg from "../../assets/tour.png";
+import { Grid2, Box } from "@mui/material";
 import Button from "../Button/Button";
+import { useState } from "react";
 import CarouselOne from "../../assets/carousel1.png";
 import CarouselTwo from "../../assets/carousel2.png";
 import CarouselThree from "../../assets/carousel3.png";
@@ -15,10 +17,24 @@ import CarouselEight from "../../assets/carousel8.png";
 import CarouselNine from "../../assets/carousel9.png";
 // import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useNavigate } from "react-router-dom";
+import Modal from "../Modal";
+import { Icon } from "@iconify-icon/react";
 
 const CoreValue = () => {
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  const [scheduleModal, setScheduleModal] = useState(false);
+
+  const handleIframeLoad = () => {
+    setLoading(false);
+  };
+
+  const handleSchduleModal = () => {
+    setScheduleModal(!scheduleModal);
+  };
+
+  const handleCloseModal = () => {
+    setScheduleModal(false);
+  };
   // const responsive = {
   //   superLargeDesktop: {
   //     // the naming can be any, depends on you.
@@ -42,6 +58,16 @@ const CoreValue = () => {
     <div className={styles.valuecont}>
       <div className={styles.valuemargin}>
         <div className={styles.marginonly}>
+          <div className={styles.elevateheader}>
+            <h4>Elevate Your Journey</h4>
+            <p>
+              Every detail in our newly built space—from our
+              luxurious stations to our comfortable waiting areas—was designed with your experience in mind.
+            </p>
+          </div>
+          <div className={styles.aboutplayer}>
+            <img src={TourImg} alt="image player" />
+          </div>
           <div className={styles.valueheader}>
             <h4>OUR CORE VALUE</h4>
             <p>
@@ -54,35 +80,30 @@ const CoreValue = () => {
               <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Elegance} alt="" />
-                  <h4>Elegance in Every Detail</h4>
+                  <h4>Convenience</h4>
                   <p>
-                    We believe that elegance resides in the finest details. From
-                    the carefully curated décor to the precision of our
-                    treatments, we infuse elegance into every aspect of your
-                    experience.
+                    No more multiple appointments at different locations—enjoy
+                    all your beauty services in one day, under one roof.
                   </p>
                 </div>
               </Grid2>
               <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Diamond} alt="" />
-                  <h4>Serenity as a Sanctuary</h4>
+                  <h4>Expert Team</h4>
                   <p>
-                    Serenity is more than just a state of mind its a sanctuary
-                    we provide for your soul. Our tranquil ambiance and soothing
-                    therapies are designed to transport you to a realm of calm.
+                    Our experienced professionals are passionate,
+                    highly skilled, and committed to quality.
                   </p>
                 </div>
               </Grid2>
               <Grid2 item lg={4} md={4} sm={4} xs={12}>
                 <div className={styles.avaluecont}>
                   <img src={Holistic} alt="" />
-                  <h4>Holistic Wellness Fusion</h4>
+                  <h4>Luxury Experience</h4>
                   <p>
-                    We view wellness as a holistic journey encompassing body,
-                    mind, and spirit. Our approach fuses beauty with wellness,
-                    offering treatments that rejuvenate not only your skin but
-                    also your senses.
+                    From the moment you walk in, you’ll feel the difference. We offer a high-end, personalized experience with every visit. We invite you to experience beauty without limits.
+                     At Unlimited Beauty Empire, we’re here to bring your vision to life with ease, luxury, and convenience.
                   </p>
                 </div>
               </Grid2>
@@ -157,13 +178,76 @@ const CoreValue = () => {
             </h4>
             <div className={styles.unveilbtn}>
               <Button
-                onClick={() => navigate("/get-started")}
+                onClick={handleSchduleModal}
                 title="BOOK YOUR VISIT"
               />
             </div>
           </div>
         </div>
       </div>
+      <Modal
+        title=""
+        modalContent={
+          <>
+            <Box sx={{ textAlign: "center", marginTop: "50px" }}>
+              <a
+                href="https://www.schedulicity.com/scheduling/UBE45J9"
+                title="Online scheduling"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.schedulicity.com/images/user-widget-buttons/schedule-btn-huckleberry-med-v2.svg"
+                  alt="Online scheduling"
+                  title="Online scheduling"
+                  border="0"
+                />
+              </a>
+              <div
+                style={{
+                  position: "relative",
+                  backgroundColor: "white",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                {loading && (
+                  <Icon
+                    icon="svg-spinners:tadpole"
+                    width="60"
+                    height="60"
+                    style={{ color: "#FF69B4", marginTop: "100px" }}
+                  />
+                )}
+                <iframe
+                  title="Schedulicity Widget"
+                  src="//www.schedulicity.com/scheduling/UBE45J9/services?embed=true"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    height: "100%",
+                    minHeight: "480px",
+                    padding: "0",
+                    margin: "20px 0px 0px 0px",
+                    zIndex: "1",
+                    opacity: loading ? 0 : 1,
+                    transition: "opacity 0.3s ease",
+                  }}
+                  onLoad={handleIframeLoad}
+                  // eslint-disable-next-line react/no-unknown-property
+                  allowTransparency="true"
+                  frameBorder="0"
+                />
+              </div>
+            </Box>
+          </>
+        }
+        modalFooter={
+          <>
+          </>
+        }
+        isopen={scheduleModal}
+        closeModal={handleCloseModal}
+      />
     </div>
   );
 };

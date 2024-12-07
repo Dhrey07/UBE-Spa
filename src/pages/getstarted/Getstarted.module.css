@@ -1,89 +1,348 @@
 .getstartedcont {
-    background-color: #FFF8ED;
-    padding-block: 80px 160px;
-    padding-inline: 20px;
+  background-color: #fff8ed;
+  padding-block: 80px 160px;
+  padding-inline: 20px;
 }
 .getstartedmargin {
-    background: #FFF;
-    max-width: 1004px;
-    margin: auto;
+  background: #fff;
+  max-width: 1004px;
+  margin: auto;
 }
 .getstartedmargin h1 {
-    font-weight: 400;
-    font-size: 24px;
-    color: #FFF8ED;
-    font-family: "Viaoda Libre", Poppins;
-    background-color: #897A64;
-    padding: 18px 24px;
-    border-radius: 4px 4px 0px 0px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff8ed;
+  font-family: "Viaoda Libre", Poppins;
+  background-color: #897a64;
+  padding: 18px 24px;
+  border-radius: 4px 4px 0px 0px;
 }
 .hairstyling {
-    background-image: url("../../assets/hair.png");
-    background-size: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-block: 24px;
-    text-align: center;
-    border-radius: 4px;
+  background-image: url("../../assets/hair.png");
+  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-block: 24px;
+  text-align: center;
+  border-radius: 4px;
 }
 .face {
-    background-image: url("../../assets/face.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-block: 24px;
-    text-align: center;
-    border-radius: 4px;
+  background-image: url("../../assets/face.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-block: 24px;
+  text-align: center;
+  border-radius: 4px;
 }
 .nails {
-    background-image: url("../../assets/nails.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-block: 24px;
-    text-align: center;
-    border-radius: 4px;
+  background-image: url("../../assets/nails.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-block: 24px;
+  text-align: center;
+  border-radius: 4px;
 }
 .massage {
-    background-image: url("../../assets/body.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-block: 24px;
-    text-align: center;
-    border-radius: 4px;
+  background-image: url("../../assets/body.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-block: 24px;
+  text-align: center;
+  border-radius: 4px;
 }
 .waxing {
-    background-image: url("../../assets/waxing.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-block: 24px;
-    text-align: center;
-    border-radius: 4px;
+  background-image: url("../../assets/waxing.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-block: 24px;
+  text-align: center;
+  border-radius: 4px;
 }
 .eyebrow {
-    background-image: url("../../assets/eyebrow.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-size: cover;
-    padding-block: 24px;
-    text-align: center;
-    border-radius: 4px;
+  background-image: url("../../assets/eyebrow.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  padding-block: 24px;
+  text-align: center;
+  border-radius: 4px;
 }
 .aboutservice h4 {
-    font-weight: 400;
-    font-size: 28px;
-    color: #FFF;
-    margin-block: 0px;
-    font-family: "Viaoda Libre", Poppins;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+  margin-block: 0px;
+  font-family: "Viaoda Libre", Poppins;
 }
 .stepitem {
-    margin-block: 30px;
+  margin-block: 30px;
+}
+.flexitemstwo {
+  display: flex;
+  margin-top: 150px;
+  align-items: flex-start;
+  margin-inline: 40px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.valuemargin {
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 120px;
+}
+.marginonly {
+  margin-inline: 5%;
+}
+.servicestext {
+  max-width: 523px;
+}
+.servicestext h1 {
+  font-family: "Viaoda Libre", Poppins;
+  font-weight: 400;
+  margin-block: 24px 0px;
+  font-size: 32px;
+  color: #df836e;
+}
+.servicestext h4 {
+  font-family: Inter;
+  font-weight: 400;
+  margin-block: 16px;
+  font-size: 18px;
+  color: #62232c;
+}
+.servicesimg img {
+  width: 100%;
+}
+.serviceheader {
+  max-width: 946px;
+  margin: auto;
+  text-align: center;
+  padding-inline: 16px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.elevateheader {
+  max-width: 1064px;
+  margin: auto;
+  text-align: center;
+  padding-inline: 16px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.serviceheader h4 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Viaoda Libre", Poppins;
+  margin-block: 0px;
+  color: #DF836E;
+}
+.gallery img {
+    width: 100%;
+}
+
+.serviceheader p {
+  font-weight: 300;
+  font-family: Poppins;
+  color: #62232c;
+  font-size: 18px;
+}
+
+.elevateheader h4 {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Inter, Poppins;
+  margin-block: 0px;
+  margin-bottom: 32px;
+  color: #df836e;
+}
+.elevateheader p {
+  font-weight: 400;
+  font-family: "Viaoda Libre";
+  color: #62232c;
+  font-size: 36px;
+  margin-block: 0px;
+}
+
+.aboutservice {
+  background: white;
+  max-width: 363px;
+  padding: 10px 20px;
+  /* min-height: 150px; */
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.aboutservice h4 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #df836e;
+  margin-block: 0px;
+  text-align: center;
+  font-family: "Viaoda Libre", Poppins;
+}
+
+.aboutservice p {
+  font-weight: 300;
+  font-size: 14px;
+  color: #62232c;
+  margin-block: 0px;
+  text-align: center;
+}
+
+.team1 {
+  background-image: url(../../assets/team1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 232px;
+  height: 283px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.facialstyling {
+  background-image: url(../../assets/facial.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 400px;
+  height: 332px;
+  position: relative;
+}
+.nailstyling {
+  background-image: url(../../assets/nails.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 400px;
+  height: 332px;
+  position: relative;
+}
+.waxstyling {
+  background-image: url(../../assets/waxing.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 400px;
+  height: 332px;
+  position: relative;
+}
+.bodystyling {
+  background-image: url(../../assets/body.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 400px;
+  height: 332px;
+  position: relative;
+}
+.eyestyling {
+  background-image: url(../../assets/eyebrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 400px;
+  height: 332px;
+  position: relative;
+}
+.mainservice {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.unveil {
+  max-width: 1280px;
+  margin-block: 30px;
+  padding-block: 141px;
+  margin-top: 100px;
+  background-color: #d5a571;
+}
+.unveil h4 {
+  margin-block: 0px;
+  font-size: 36px;
+  font-weight: 400;
+  max-width: 670px;
+  margin: auto;
+  font-family: "Viaoda Libre", Poppins;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.unveilbtn {
+  max-width: 180px;
+  margin: auto;
+  margin-top: 48px;
+}
+
+@media (max-width: 1100px) {
+  .servicemargin {
+    padding-block: 40px 65px;
+  }
+  .flexitemstwo {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .servicestext h4 {
+    font-size: 32px;
+    margin-block: 20px;
+  }
+  .flexitemstwo {
+    margin-top: 30px;
+  }
+  .unveil {
+    padding-block: 50px;
+    padding-inline: 10px;
+    margin-top: 50px;
+  }
+  .unveil h4 {
+    font-size: 18px;
+  }
+  .unveilbtn {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .marginonly {
+    margin-inline: 16px;
+  }
+  .valuemargin {
+    padding-bottom: 60px;
+  }
+  .flexitemstwo {
+    margin-inline: 16px;
+  }
+  .servicestext h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .servicestext h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .serviceheader {
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
+  .elevateheader h4 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .elevateheader p {
+    font-size: 18px;
+    margin-block: 0px;
+  }
+  .elevateheader {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 }

@@ -3,11 +3,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(213, 165, 113, 0.2);
+    padding-inline: 40px;
+    border-radius: 120px;
+    border: 1px solid rgba(213, 165, 113, 1);
     gap: 32px;
     color: white;
     font-weight: 400;
     cursor: pointer;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
+
 .btnstyle {
     width: 175px;
 }
@@ -21,6 +28,7 @@
 }
 .navbar p {
     position: relative;
+    font-weight: 400;
     font-size: 16px;
     transition: color 0.3s ease;
 }
@@ -29,18 +37,18 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -4px;
+    bottom: -1px;
     left: 0;
     background-color: #D5A571;
     transition: width 0.3s ease;
 }
 
 .navbar p:hover::before {
-    width: 100%; /* Full width of the p tag on hover */
+    width: 100%;
 }
 
 .navbar p:hover {
-    color: #f0f0f0; /* Optional: Lighten text color on hover */
+    color: #f0f0f0;
 }
 @media (max-width: 500px) {
     .logo {

@@ -3,7 +3,7 @@
 }
 .aboutmain {
     max-width: 1440px;
-    padding-block: 80px 156px;
+    padding-block: 80px 50px;
     margin: auto;
 }
 .aboutheader {
@@ -16,12 +16,12 @@
     font-weight: 400;
     font-family: "Viaoda Libre", Poppins;
     margin-block: 0px;
-    color: #FF69B4;
+    color: rgba(223, 131, 110, 1);
 }
 .aboutheader p {
     font-weight: 400;
     font-family: Poppins;
-    color: #897A64;
+    color: rgba(98, 35, 44, 1);
     font-size: 16px;
 }
 .aboutplayer {

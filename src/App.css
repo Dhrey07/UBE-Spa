@@ -11,3 +11,7 @@ button {
 .css-3hpdci-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
   color: #FF69B4 !important;
 }
+
+.margin-top {
+  margin-top: 32px;
+}
