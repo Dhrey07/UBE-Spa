@@ -116,7 +116,7 @@
 }
 .servicestext h4 {
   font-family: Inter;
-  font-weight: 400;
+  font-weight: 300;
   margin-block: 16px;
   font-size: 18px;
   color: #62232c;
@@ -147,6 +147,10 @@
   font-family: "Viaoda Libre", Inter;
   margin-block: 0px;
   color: #DF836E;
+}
+.gallery {
+  width: 100%;
+  height: auto;
 }
 .gallery img {
     width: 100%;
@@ -184,6 +188,9 @@
   bottom: 20px;
   left: 20px;
   right: 20px;
+}
+.secondpara {
+  margin-top: 40px !important;
 }
 
 .aboutservice h4 {

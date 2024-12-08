@@ -28,6 +28,7 @@
     font-weight: 400;
     margin-block: 8px;
     color: white;
+    font-family: Inter;
 }
 .footerinfo h4 {
     font-weight: 400;
@@ -63,7 +64,7 @@
     font-weight: 400;
     font-size: 14px;
     color: #FFF8ED;
-    font-family: "Viaoda Libre", Poppins;
+    font-family: "Viaoda Libre", Inter;
 }
 .footerbottomright {
     width: 100%;

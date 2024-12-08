@@ -52,16 +52,16 @@ const Getstarted = () => {
           <div className={styles.flexitemstwo}>
             <div className={styles.servicestext}>
               <h1>
-                Welcome to Unlimited Beauty Empire, Indianapolis’ premier
-                all-in-one luxury salon and spa, designed to bring you every
-                beauty service under one roof.
+                WELCOME TO UNLIMITED BEAUTY EMPIRE, INDIANAPOLIS’ PREMIER
+                ALL-IN-ONE LUXURY SALON AND SPA, DESIGNED TO BRING YOU EVERY
+                BEAUTY SERVICE UNDER ONE ROOF.
               </h1>
               <h4>
                 We believe that self-care and beauty should be a relaxing,
                 convenient, and indulgent experience, whether you’re seeking a
                 fresh haircut, a rejuvenating facial, or a total makeover.
               </h4>
-              <h4 className="margin-top">
+              <h4 className={styles.secondpara}>
                 At Unlimited Beauty Empire, we’re more than just a salon; we’re
                 a sanctuary. Our newly built, modern space is dedicated to
                 meeting the unique beauty needs of every client, all in one
@@ -91,7 +91,7 @@ const Getstarted = () => {
           <div className={styles.mainservice}>
             <Grid
               container
-              spacing={2}
+              rowSpacing={1} columnSpacing={2}
               sx={{
                 // justifyContent: { xs: "center" },
                 textAlign: { xs: "center" },
@@ -103,9 +103,9 @@ const Getstarted = () => {
                 </div>
               </Grid>
               <Grid size={{ lg: 8, md: 8, sm: 6, xs: 12 }}>
-                <Grid container spacing={1}>
+                <Grid container rowSpacing={1.3} columnSpacing={2} >
                   <Grid size={{ lg: 6, md: 6, sm: 12, xs: 12 }}>
-                    <Grid container spacing={2}>
+                    <Grid container rowSpacing={1.4} columnSpacing={2}>
                       <Grid size={{ lg: 12, md: 12, sm: 12, xs: 12 }}>
                         <div className={styles.gallery}>
                           <img src={Beards} alt="2nd gallery" />
@@ -135,7 +135,7 @@ const Getstarted = () => {
                   </Grid>
                   <Grid size={{ lg: 6, md: 6, sm: 12, xs: 12 }}>
                     <div className={styles.gallery}>
-                      <img src={EyeBrow} alt="7thth gallery" />
+                      <img src={EyeBrow} alt="7th gallery" />
                     </div>
                   </Grid>
                 </Grid>
