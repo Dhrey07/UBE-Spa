@@ -18,10 +18,30 @@ function App() {
   const location = useLocation();
 
   // Track route changes and show loader
+  // useEffect(() => {
+  //   setLoading(true); // Show the loader when the route changes
+  //   const timer = setTimeout(() => setLoading(false), 5000); // Simulate loading for smooth transitions
+  //   return () => clearTimeout(timer); // Clear timeout on unmount
+  // }, [location]);
+
   useEffect(() => {
-    setLoading(true); // Show the loader when the route changes
-    const timer = setTimeout(() => setLoading(false), 5000); // Simulate loading for smooth transitions
-    return () => clearTimeout(timer); // Clear timeout on unmount
+    const handleLoadStart = () => setLoading(true);
+    const handleLoadEnd = () => setLoading(false);
+
+    // Listen for window load and beforeunload events
+    window.addEventListener('beforeunload', handleLoadStart);
+    window.addEventListener('load', handleLoadEnd);
+
+    // Set loading on route change
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 5000);
+
+    // Cleanup listeners and timer
+    return () => {
+      window.removeEventListener('beforeunload', handleLoadStart);
+      window.removeEventListener('load', handleLoadEnd);
+      clearTimeout(timer);
+    };
   }, [location]);
 
   return (
