@@ -68,7 +68,7 @@ const Navbar = ({ servicesRef }) => {
         ) : (
           <>
             <div className={styles.navbar}>
-              <p>HOME</p>
+              <p onClick={() => handleRouteChange("/")}>HOME</p>
               <p onClick={() => handleRouteChange("/about-us")}>ABOUT US</p>
               <p onClick={handleServicesClick}>OUR SERVICES</p>
               <p onClick={() => handleRouteChange("/contact-us")}>CONTACT</p>

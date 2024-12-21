@@ -56,6 +56,7 @@ const Footer = ({ servicesRef }) => {
   const handleRouteChange = (path) => {
     startTransition(() => {
       navigate(path);
+      smoothScrollToTop();
     });
   };
 

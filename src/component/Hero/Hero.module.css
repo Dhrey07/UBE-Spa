@@ -21,11 +21,11 @@
 .herotext p {
     font-weight: 300;
     font-size: 24px;
-    font-family: Poppins;
+    font-family: Inter;
     margin-block: 0px;
 }
 .herotext h1 {
-    font-family: "Viaoda Libre", Poppins;
+    font-family: "Viaoda Libre", Inter;
     font-weight: 400;
     margin-block: 16px 0px;
     font-size: 64px;
@@ -39,6 +39,9 @@
     .herotext {
         margin-inline: 16px;
         padding-top: 50%;
+    }
+    .herotext p {
+        font-size: 18px;
     }
     .herotext h1 {
         font-size: 32px;

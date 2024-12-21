@@ -327,17 +327,23 @@
   .flexitemstwo {
     margin-inline: 16px;
   }
+  .gallery img {
+    height: 30%;
+  }
   .servicestext h1 {
     font-size: 24px;
-    text-align: center;
+    text-align: left;
   }
   .servicestext h4 {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
   }
   .serviceheader {
     margin-top: 30px;
     margin-bottom: 16px;
+  }
+  .serviceheader p {
+    text-align: left;
   }
   .elevateheader h4 {
     font-weight: 400;

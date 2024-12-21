@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, startTransition } from "react";
 import {
   Drawer,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Box
+  Box,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./Navbar.module.css";
@@ -24,11 +24,17 @@ const DrawerComp = ({ handleServicesClick }) => {
   const [scheduleModal, setScheduleModal] = useState(false);
 
   // Define the navigation paths corresponding to each page
+  const handleRouteChange = (path) => {
+    startTransition(() => {
+      navigate(path);
+    });
+  };
+
   const handleNavigation = (page) => {
-    if (page === "Home") navigate("/");
+    if (page === "Home") handleRouteChange("/");
     if (page === "Services") handleServicesClick();
-    if (page === "About us") navigate("/about-us");
-    if (page === "Contact") navigate("/contact-us");
+    if (page === "About us") handleRouteChange("/about-us");
+    if (page === "Contact") handleRouteChange("/contact-us");
   };
 
   const handleIframeLoad = () => {
@@ -54,7 +60,7 @@ const DrawerComp = ({ handleServicesClick }) => {
           "& .MuiDrawer-paper": {
             width: "50%",
             backgroundColor: "transparent",
-            paddingTop: "100px"
+            paddingTop: "100px",
           },
         }}
       >
@@ -68,7 +74,7 @@ const DrawerComp = ({ handleServicesClick }) => {
           ))}
         </List>
         <div className={styles.navnewbtn}>
-          <Button onClick={handleSchduleModal} title="BOOK YOUR VISIT"/>
+          <Button onClick={handleSchduleModal} title="BOOK YOUR VISIT" />
         </div>
       </Drawer>
       <div className={styles.navbtn} onClick={() => setOpenDrawer(!openDrawer)}>
@@ -130,10 +136,7 @@ const DrawerComp = ({ handleServicesClick }) => {
             </Box>
           </>
         }
-        modalFooter={
-          <>
-          </>
-        }
+        modalFooter={<></>}
         isopen={scheduleModal}
         closeModal={handleCloseModal}
       />
